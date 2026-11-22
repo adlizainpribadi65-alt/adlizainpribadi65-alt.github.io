@@ -894,6 +894,71 @@
       transform: translateY(0);
     }
 
+    /* VISI & MISI */
+    .vision-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .vision-card {
+      padding: 24px;
+      border-radius: var(--radius);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .vision-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .vision-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-sm);
+      background: var(--accent-soft);
+      border: 1px solid rgba(37, 99, 235, 0.2);
+      color: var(--accent-text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+    }
+
+    .vision-tag {
+      font-size: 0.74rem;
+      font-family: var(--font-mono);
+      color: var(--accent-text);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .vision-title {
+      font-size: 1.22rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 10px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .vision-body {
+      font-size: 0.94rem;
+      color: #cbd5e1;
+      line-height: 1.65;
+      position: relative;
+      z-index: 2;
+      background: var(--bg-subtle);
+      padding: 16px;
+      border-radius: var(--radius-sm);
+      border-left: 3px solid var(--accent);
+    }
+
     /* CERTIFICATIONS */
     .certifications-grid {
       display: grid;
@@ -973,6 +1038,9 @@
       .certifications-grid {
         grid-template-columns: 1fr;
       }
+      .vision-grid {
+        grid-template-columns: 1fr;
+      }
       .timeline-row {
         grid-template-columns: 1fr;
         gap: 8px;
@@ -1000,6 +1068,7 @@
       </a>
 
       <ul class="nav-links">
+        <li><a href="#vision">Visi &amp; Misi</a></li>
         <li><a href="#projects">Proyek</a></li>
         <li><a href="#thesis">Skripsi</a></li>
         <li><a href="#experience">Pengalaman</a></li>
@@ -1077,6 +1146,7 @@
           <div class="terminal-title">zsh — adli@unibba-laptop:~</div>
           <div class="terminal-tabs">
             <button class="term-btn active" id="btn-whoami" onclick="runTermCmd('whoami')">whoami</button>
+            <button class="term-btn" id="btn-vision" onclick="runTermCmd('vision')">visi.md</button>
             <button class="term-btn" id="btn-stack" onclick="runTermCmd('stack')">stack.json</button>
             <button class="term-btn" id="btn-git" onclick="runTermCmd('git')">git log</button>
             <button class="term-btn" id="btn-contact" onclick="runTermCmd('contact')">kontak.sh</button>
@@ -1118,6 +1188,44 @@
         <span class="info-value">JavaScript, PHP, Python</span>
       </div>
     </div>
+
+    <!-- VISI & MISI PROFESIONAL -->
+    <section id="vision" class="reveal">
+      <div class="section-head">
+        <h2 class="section-title">Visi &amp; Misi</h2>
+        <p class="section-desc">Prinsip kerja, komitmen profesionalisme, dan orientasi kontribusi bagi perusahaan.</p>
+      </div>
+
+      <div class="vision-grid">
+        <!-- Visi Card -->
+        <div class="vision-card spotlight-card">
+          <div class="vision-header">
+            <div class="vision-icon">
+              <i class="fa-solid fa-compass"></i>
+            </div>
+            <span class="vision-tag">Arah &amp; Tujuan</span>
+          </div>
+          <h3 class="vision-title">Visi Saya</h3>
+          <div class="vision-body">
+            &ldquo;Menjadi pribadi yang profesional dan kompeten, terus belajar, mengembangkan kemampuan, serta memberikan kontribusi positif bagi perusahaan.&rdquo;
+          </div>
+        </div>
+
+        <!-- Misi Card -->
+        <div class="vision-card spotlight-card">
+          <div class="vision-header">
+            <div class="vision-icon">
+              <i class="fa-solid fa-bullseye"></i>
+            </div>
+            <span class="vision-tag">Komitmen &amp; Tindakan</span>
+          </div>
+          <h3 class="vision-title">Misi Saya</h3>
+          <div class="vision-body">
+            &ldquo;Meningkatkan kompetensi, menjaga profesionalisme, membangun kerja sama, serta memberikan kontribusi terbaik bagi perusahaan.&rdquo;
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- PROYEK PILIHAN -->
     <section id="projects" class="reveal">
@@ -1622,6 +1730,10 @@
       whoami: {
         cmd: "whoami --verbose",
         res: `[nama]: "Adli Zain Pribadi, S.Kom."<br>[pendidikan]: "Sarjana Komputer (Universitas Bale Bandung)"<br>[domisili]: "Bandung, Indonesia"<br>[status]: "Siap untuk posisi Software Engineer &amp; Full-Stack Web Developer"`
+      },
+      vision: {
+        cmd: "cat visi-misi.md",
+        res: `<span style="color:#60a5fa;font-weight:600;">[VISI SAYA]</span><br>&ldquo;Menjadi pribadi yang profesional dan kompeten, terus belajar, mengembangkan kemampuan, serta memberikan kontribusi positif bagi perusahaan.&rdquo;<br><br><span style="color:#60a5fa;font-weight:600;">[MISI SAYA]</span><br>&ldquo;Meningkatkan kompetensi, menjaga profesionalisme, membangun kerja sama, serta memberikan kontribusi terbaik bagi perusahaan.&rdquo;`
       },
       stack: {
         cmd: "cat stack.json | jq .core",

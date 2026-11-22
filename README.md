@@ -19,6 +19,10 @@ A world-class, ultra-modern developer portfolio engineered for **Adli Zain Priba
    - 1 In-Depth Undergraduate Thesis & Industrial Case Study.
    - 100% Production Code Delivery & Practical Engineering Focus.
 
+2. **Visi & Misi Profesional**
+   - **Visi:** Menjadi pribadi yang profesional dan kompeten, terus belajar, mengembangkan kemampuan, serta memberikan kontribusi positif bagi perusahaan.
+   - **Misi:** Meningkatkan kompetensi, menjaga profesionalisme, membangun kerja sama, serta memberikan kontribusi terbaik bagi perusahaan.
+
 3. **Core Technical Competencies**
    - **Full-Stack Web:** React.js, Next.js, JavaScript (ES6+), TypeScript, Tailwind CSS, SheetJS.
    - **AI & Quantitative:** Python, TensorFlow, LSTM Deep Learning, AHP-SAW MCDM, OpenCV, Pandas.
