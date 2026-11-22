@@ -35,8 +35,8 @@ A world-class, ultra-modern developer portfolio engineered for **Adli Zain Priba
 5. **Professional Experience & Academics**
    - **Software Engineer Intern** @ Tech Nusantara (Golang microservices, payment gateways, PostgreSQL optimization).
    - **Informatics Lab Teaching Assistant** @ Universitas Bale Bandung (Algorithm & Data Structures mentoring).
-   - **Bachelor of Computer Science (S.Kom.)** @ Universitas Bale Bandung (2020–2024).
-   - **SMA Negeri 1 Banjaran** (MIPA, 2016–2019) & **SMP Negeri 2 Banjaran** (2013–2016).
+   - **Bachelor of Computer Science (S.Kom.)** @ Universitas Bale Bandung (2022–2026).
+   - **SMA Negeri 1 Banjaran** (MIPA, 2019–2022) & **SMP Negeri 2 Banjaran** (2016–2019).
 
 6. **Undergraduate Thesis & Industrial Case Study**
    - Title: *SISTEM PENDUKUNG KEPUTUSAN PENILAIAN KINERJA KARYAWAN BERBASIS AHP-SAW TERINTEGRASI SOP KEDISIPLINAN*
