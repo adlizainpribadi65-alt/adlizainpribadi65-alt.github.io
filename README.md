@@ -16,7 +16,7 @@ A world-class, ultra-modern developer portfolio engineered for **Adli Zain Priba
 2. **Impact Metrics**
    - 15+ Active Repositories on GitHub.
    - 10+ Production & Web Applications.
-   - 1 Published Scientific Research Paper.
+   - 1 In-Depth Undergraduate Thesis & Industrial Case Study.
    - 100% Production Code Delivery & Practical Engineering Focus.
 
 3. **Core Technical Competencies**
@@ -31,9 +31,10 @@ A world-class, ultra-modern developer portfolio engineered for **Adli Zain Priba
    - **Bybit Automated RSI Trading Bot** — Algorithmic crypto execution engine ([GitHub](https://github.com/adlizainpribadi65-alt/bybit-rsi-crypto-bot)).
    - **Sistem Absensi Pegawai v2** & **Portal Seleksi Beasiswa Mahasiswa**.
 
-5. **Peer-Reviewed Scientific Publication**
+5. **Undergraduate Thesis & Industrial Case Study**
    - Title: *SISTEM PENDUKUNG KEPUTUSAN PENILAIAN KINERJA KARYAWAN BERBASIS AHP-SAW TERINTEGRASI SOP KEDISIPLINAN*
-   - Corresponding Author: Adli Zain Pribadi
+   - Author: Adli Zain Pribadi (Advised by: Yudi Herdiana, Yusuf Muharam)
+   - Case Study: Reegiolla The Shoes (Cimaung, Kab. Bandung)
 
 ---
 
