@@ -38,8 +38,9 @@ A world-class, ultra-modern developer portfolio engineered for **Adli Zain Priba
    - **Ethereum Price Prediction (LSTM)** & **Bybit Automated RSI Trading Bot**.
 
 5. **Professional Experience & Academics**
-   - **Software Engineer Intern** @ Tech Nusantara (Golang microservices, payment gateways, PostgreSQL optimization).
-   - **Informatics Lab Teaching Assistant** @ Universitas Bale Bandung (Algorithm & Data Structures mentoring).
+   - **Reegiolla The Shoes** (2024–2026): Creative Design, Inventory Application & SPK Kinerja Karyawan.
+   - **Jasa Pembuatan Aplikasi** (2023–Present): Web E-Commerce, Undangan Digital, Ucapan Digital Web & Mobile.
+   - **Sahira Coklat Dubai** (2023–2024): Packing Staff & Operational QC.
    - **Bachelor of Computer Science (S.Kom.)** @ Universitas Bale Bandung (2022–2026).
    - **SMA Negeri 1 Banjaran** (MIPA, 2019–2022) & **SMP Negeri 2 Banjaran** (2016–2019).
    - **Certifications:** Junior Web Development (2026) & TOEFL (2026).
