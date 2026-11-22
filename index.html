@@ -7,7 +7,7 @@
   
   <!-- Primary Meta Tags -->
   <meta name="title" content="Adli Zain Pribadi — Software Engineer">
-  <meta name="description" content="Portfolio of Adli Zain Pribadi. Computer Science graduate (S.Kom.) from Universitas Bale Bandung. Software engineer specializing in web applications, operational systems, and practical decision support algorithms.">
+  <meta name="description" content="Official portfolio of Adli Zain Pribadi. Computer Science graduate (S.Kom.) from Universitas Bale Bandung. Software engineer specializing in web applications, operational systems, and practical decision support algorithms.">
   <meta name="author" content="Adli Zain Pribadi">
 
   <!-- Open Graph / Social -->
@@ -18,31 +18,31 @@
   <meta property="og:image" content="assets/adli.jpeg">
 
   <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%200%20100%20100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%200%20100%20100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
 
   <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <style>
     /* ==========================================================================
-       MODERN MINIMALIST DEVELOPER THEME
-       Clean, grounded, high-legibility craft design (No neon glow, no AI tropes)
+       MODERN DEVELOPER THEME — ELEGANT TECH AESTHETIC
+       Crafted dark mode with blueprint grid, interactive terminal, spotlight sheen
        ========================================================================== */
     :root {
-      --bg: #0a0a0c;
-      --bg-subtle: #121216;
-      --card-bg: #141418;
-      --card-hover: #1a1a20;
-      --border: #26262e;
-      --border-subtle: #1e1e24;
-      --border-focus: #3f3f4e;
+      --bg: #09090c;
+      --bg-subtle: #111116;
+      --card-bg: #141419;
+      --card-hover: #191921;
+      --border: #23232b;
+      --border-subtle: #1a1a22;
+      --border-focus: #3b82f6;
       
       --text: #f4f4f6;
-      --text-muted: #9e9ea8;
-      --text-subtle: #6e6e7a;
+      --text-muted: #9c9ca8;
+      --text-subtle: #686875;
       
       --accent: #2563eb;
       --accent-soft: rgba(37, 99, 235, 0.12);
@@ -70,8 +70,28 @@
       font-family: var(--font-sans);
       line-height: 1.65;
       font-size: 15px;
+      position: relative;
+      overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Subtle Engineering Grid Background Canvas */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.06) 0%, transparent 50%),
+        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 100% 100%, 36px 36px, 36px 36px;
+      mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%);
+      -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%);
+      pointer-events: none;
+      z-index: 0;
     }
 
     a {
@@ -79,22 +99,24 @@
       text-decoration: none;
     }
 
-    /* Container */
     .container {
       max-width: 960px;
       margin: 0 auto;
       padding: 0 24px;
+      position: relative;
+      z-index: 1;
     }
 
-    /* Header / Nav */
+    /* Header */
     header.site-header {
       position: sticky;
       top: 0;
       z-index: 50;
-      background: rgba(10, 10, 12, 0.85);
+      background: rgba(9, 9, 12, 0.85);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border-subtle);
+      transition: all 0.2s ease;
     }
 
     .nav-inner {
@@ -114,8 +136,8 @@
     }
 
     .brand img {
-      width: 34px;
-      height: 34px;
+      width: 32px;
+      height: 32px;
       border-radius: 50%;
       object-fit: cover;
       border: 1px solid var(--border);
@@ -124,13 +146,13 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 24px;
+      gap: 22px;
       list-style: none;
     }
 
     .nav-links a {
       color: var(--text-muted);
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-weight: 500;
       transition: color 0.15s ease;
     }
@@ -162,7 +184,7 @@
 
     .btn-primary {
       background: #f4f4f6;
-      color: #0a0a0c;
+      color: #09090c;
     }
 
     .btn-primary:hover {
@@ -183,7 +205,7 @@
 
     /* HERO SECTION */
     .hero-section {
-      padding: 80px 0 60px;
+      padding: 70px 0 40px;
     }
 
     .hero-grid {
@@ -191,6 +213,7 @@
       grid-template-columns: 1fr 240px;
       align-items: start;
       gap: 48px;
+      margin-bottom: 32px;
     }
 
     .status-badge {
@@ -202,9 +225,10 @@
       color: var(--success-text);
       padding: 4px 12px;
       border-radius: 999px;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       font-weight: 500;
       margin-bottom: 20px;
+      font-family: var(--font-mono);
     }
 
     .status-dot {
@@ -212,6 +236,7 @@
       height: 7px;
       border-radius: 50%;
       background: var(--success);
+      box-shadow: 0 0 6px rgba(16, 185, 129, 0.6);
     }
 
     .hero-name {
@@ -219,22 +244,44 @@
       font-weight: 700;
       letter-spacing: -0.03em;
       line-height: 1.2;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       color: var(--text);
     }
 
     .hero-title {
-      font-size: 1.15rem;
+      font-size: 1.12rem;
       font-weight: 500;
       color: var(--text-muted);
       margin-bottom: 20px;
+      font-family: var(--font-mono);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .typewriter-text {
+      color: var(--accent-text);
+      font-weight: 600;
+    }
+
+    .typewriter-cursor {
+      display: inline-block;
+      color: var(--accent-text);
+      animation: blink 0.9s infinite;
+      font-weight: 400;
+    }
+
+    @keyframes blink {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
     }
 
     .hero-bio {
       color: var(--text-muted);
-      font-size: 1rem;
+      font-size: 0.98rem;
       line-height: 1.7;
-      margin-bottom: 28px;
+      margin-bottom: 24px;
       max-width: 620px;
     }
 
@@ -245,7 +292,7 @@
     .hero-actions {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
       flex-wrap: wrap;
     }
 
@@ -266,6 +313,7 @@
       color: var(--text);
       border-color: var(--border-focus);
       background: var(--card-bg);
+      transform: translateY(-1px);
     }
 
     /* Hero Avatar Frame */
@@ -275,6 +323,7 @@
       border-radius: var(--radius);
       padding: 10px;
       text-align: center;
+      position: relative;
     }
 
     .hero-avatar-card img {
@@ -298,26 +347,140 @@
       margin-top: 2px;
     }
 
+    /* ==========================================================================
+       INTERACTIVE DEVELOPER TERMINAL WIDGET
+       An authentic, elegant CLI showing developer craft & micro-interactions
+       ========================================================================== */
+    .dev-terminal {
+      background: #0d0d12;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      margin-bottom: 48px;
+      transition: border-color 0.2s ease;
+    }
+
+    .dev-terminal:hover {
+      border-color: rgba(96, 165, 250, 0.3);
+    }
+
+    .terminal-header {
+      background: #13131a;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .terminal-dots {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .term-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    .dot-red { background: #ef4444; }
+    .dot-yellow { background: #f59e0b; }
+    .dot-green { background: #10b981; }
+
+    .terminal-title {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      color: var(--text-subtle);
+    }
+
+    .terminal-tabs {
+      display: flex;
+      gap: 6px;
+    }
+
+    .term-btn {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 3px 10px;
+      border-radius: 4px;
+      font-size: 0.72rem;
+      font-family: var(--font-mono);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .term-btn:hover, .term-btn.active {
+      background: var(--bg-subtle);
+      color: var(--text);
+      border-color: var(--border-focus);
+    }
+
+    .terminal-body {
+      padding: 16px 20px;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      line-height: 1.6;
+      min-height: 130px;
+    }
+
+    .term-line {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    .term-prompt {
+      color: #34d399;
+      font-weight: 600;
+    }
+
+    .term-path {
+      color: #60a5fa;
+    }
+
+    .term-command {
+      color: #f4f4f6;
+    }
+
+    .term-output {
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      padding-left: 4px;
+    }
+
+    .term-output.code {
+      color: #cbd5e1;
+      background: rgba(0, 0, 0, 0.2);
+      padding: 8px 12px;
+      border-radius: 6px;
+      border-left: 2px solid var(--accent);
+    }
+
     /* QUICK INFO STRIP */
     .quick-info-strip {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 16px;
-      padding: 24px;
+      padding: 20px 24px;
       background: var(--bg-subtle);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      margin-bottom: 64px;
+      margin-bottom: 56px;
     }
 
     .info-item {
       display: flex;
       flex-direction: column;
-      gap: 4px;
+      gap: 3px;
     }
 
     .info-label {
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       text-transform: uppercase;
       letter-spacing: 0.05em;
       color: var(--text-subtle);
@@ -325,23 +488,23 @@
     }
 
     .info-value {
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       font-weight: 600;
       color: var(--text);
     }
 
-    /* SECTION LAYOUT */
+    /* SECTIONS */
     section {
-      padding: 40px 0;
+      padding: 44px 0;
       border-top: 1px solid var(--border-subtle);
     }
 
     .section-head {
-      margin-bottom: 28px;
+      margin-bottom: 26px;
     }
 
     .section-title {
-      font-size: 1.4rem;
+      font-size: 1.35rem;
       font-weight: 700;
       letter-spacing: -0.02em;
       margin-bottom: 6px;
@@ -350,10 +513,44 @@
 
     .section-desc {
       color: var(--text-muted);
-      font-size: 0.92rem;
+      font-size: 0.9rem;
     }
 
-    /* PROJECT CARDS */
+    /* ==========================================================================
+       SPOTLIGHT INTERACTIVE CARDS
+       Subtle mouse-following radial sheen (Linear / Raycast craft aesthetic)
+       ========================================================================== */
+    .spotlight-card {
+      position: relative;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: border-color 0.2s ease, background-color 0.2s ease;
+      overflow: hidden;
+    }
+
+    .spotlight-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: radial-gradient(350px circle at var(--mouse-x, -500px) var(--mouse-y, -500px), rgba(96, 165, 250, 0.08), transparent 40%);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 1;
+    }
+
+    .spotlight-card:hover::before {
+      opacity: 1;
+    }
+
+    .spotlight-card:hover {
+      border-color: rgba(96, 165, 250, 0.35);
+      background-color: var(--card-hover);
+    }
+
+    /* PROJECT GRID */
     .projects-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -361,23 +558,16 @@
     }
 
     .project-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
       padding: 22px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      transition: border-color 0.15s ease, background-color 0.15s ease;
-    }
-
-    .project-card:hover {
-      border-color: var(--border-focus);
-      background-color: var(--card-hover);
     }
 
     .project-top {
       margin-bottom: 16px;
+      position: relative;
+      z-index: 2;
     }
 
     .project-header-row {
@@ -388,7 +578,7 @@
     }
 
     .project-category {
-      font-size: 0.75rem;
+      font-size: 0.74rem;
       font-weight: 600;
       color: var(--accent-text);
       font-family: var(--font-mono);
@@ -396,18 +586,22 @@
       letter-spacing: 0.04em;
     }
 
-    .project-badge-featured {
-      font-size: 0.72rem;
-      background: rgba(245, 158, 11, 0.12);
-      color: #fbbf24;
-      border: 1px solid rgba(245, 158, 11, 0.25);
+    .project-badge-live {
+      font-size: 0.7rem;
+      background: var(--success-soft);
+      color: var(--success-text);
+      border: 1px solid rgba(16, 185, 129, 0.25);
       padding: 2px 8px;
       border-radius: 999px;
       font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-family: var(--font-mono);
     }
 
     .project-name {
-      font-size: 1.15rem;
+      font-size: 1.12rem;
       font-weight: 700;
       letter-spacing: -0.01em;
       margin-bottom: 8px;
@@ -425,11 +619,10 @@
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
-      margin-bottom: 18px;
     }
 
     .tag {
-      font-size: 0.75rem;
+      font-size: 0.74rem;
       font-family: var(--font-mono);
       padding: 3px 8px;
       border-radius: 4px;
@@ -444,6 +637,8 @@
       gap: 12px;
       padding-top: 14px;
       border-top: 1px solid var(--border-subtle);
+      position: relative;
+      z-index: 2;
     }
 
     .proj-link {
@@ -468,12 +663,14 @@
       color: #93c5fd;
     }
 
-    /* RESEARCH / THESIS CARD */
+    /* THESIS / CASE STUDY */
     .thesis-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
       padding: 28px;
+    }
+
+    .thesis-content {
+      position: relative;
+      z-index: 2;
     }
 
     .thesis-badge {
@@ -526,11 +723,11 @@
       gap: 8px;
     }
 
-    /* TIMELINE (EXPERIENCE & EDUCATION) */
+    /* TIMELINE */
     .timeline-list {
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 14px;
     }
 
     .timeline-row {
@@ -538,14 +735,11 @@
       grid-template-columns: 140px 1fr;
       gap: 24px;
       padding: 18px 20px;
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      transition: border-color 0.15s ease;
     }
 
-    .timeline-row:hover {
-      border-color: var(--border-focus);
+    .timeline-inner {
+      position: relative;
+      z-index: 2;
     }
 
     .timeline-date {
@@ -556,14 +750,14 @@
     }
 
     .timeline-content h4 {
-      font-size: 1rem;
+      font-size: 0.98rem;
       font-weight: 700;
       color: var(--text);
       margin-bottom: 4px;
     }
 
     .timeline-org {
-      font-size: 0.88rem;
+      font-size: 0.86rem;
       color: var(--accent-text);
       font-weight: 500;
       margin-bottom: 8px;
@@ -592,10 +786,12 @@
     }
 
     .skill-box {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
       padding: 20px;
+    }
+
+    .skill-inner {
+      position: relative;
+      z-index: 2;
     }
 
     .skill-box h4 {
@@ -655,6 +851,8 @@
       margin-top: 60px;
       font-size: 0.82rem;
       color: var(--text-subtle);
+      position: relative;
+      z-index: 1;
     }
 
     .footer-inner {
@@ -694,6 +892,18 @@
       pointer-events: auto;
     }
 
+    /* SCROLL REVEAL ANIMATION */
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     /* RESPONSIVE */
     @media (max-width: 768px) {
       .hero-grid {
@@ -717,6 +927,9 @@
         grid-template-columns: 1fr;
       }
       .nav-links {
+        display: none;
+      }
+      .dev-terminal {
         display: none;
       }
     }
@@ -757,11 +970,14 @@
         <div>
           <div class="status-badge">
             <span class="status-dot"></span>
-            <span>Available for Full-Time Roles &amp; Projects</span>
+            <span>● git:(main) • Available for Hiring</span>
           </div>
 
           <h1 class="hero-name">Adli Zain Pribadi</h1>
-          <div class="hero-title">Software Engineer &bull; Web &amp; Systems Developer</div>
+          <div class="hero-title">
+            <span>Software Engineer &bull;</span>
+            <span class="typewriter-text" id="typewriter"></span><span class="typewriter-cursor">_</span>
+          </div>
 
           <div class="hero-bio">
             <p>
@@ -788,16 +1004,48 @@
           </div>
         </div>
 
-        <div class="hero-avatar-card">
+        <div class="hero-avatar-card spotlight-card">
           <img src="assets/adli.jpeg" alt="Adli Zain Pribadi" onerror="this.src='https://avatars.githubusercontent.com/u/187979644?v=4'">
           <div class="avatar-meta">Adli Zain Pribadi, S.Kom.</div>
           <div class="avatar-sub">Teknik Informatika &bull; UNIBBA</div>
         </div>
       </div>
+
+      <!-- INTERACTIVE DEVELOPER TERMINAL -->
+      <div class="dev-terminal reveal">
+        <div class="terminal-header">
+          <div class="terminal-dots">
+            <span class="term-dot dot-red"></span>
+            <span class="term-dot dot-yellow"></span>
+            <span class="term-dot dot-green"></span>
+          </div>
+          <div class="terminal-title">zsh — adli@unibba-laptop:~</div>
+          <div class="terminal-tabs">
+            <button class="term-btn active" id="btn-whoami" onclick="runTermCmd('whoami')">whoami</button>
+            <button class="term-btn" id="btn-stack" onclick="runTermCmd('stack')">stack.json</button>
+            <button class="term-btn" id="btn-git" onclick="runTermCmd('git')">git log</button>
+            <button class="term-btn" id="btn-contact" onclick="runTermCmd('contact')">contact.sh</button>
+          </div>
+        </div>
+        <div class="terminal-body" id="termOutput">
+          <div class="term-line">
+            <span class="term-prompt">➜</span> 
+            <span class="term-path">~</span> 
+            <span class="term-command" id="termExecCmd">whoami --verbose</span>
+          </div>
+          <div class="term-output" id="termExecResult">
+            [name]: "Adli Zain Pribadi, S.Kom."<br>
+            [degree]: "Bachelor of Computer Science (Universitas Bale Bandung)"<br>
+            [location]: "Bandung, Indonesia"<br>
+            [status]: "Ready for Full-Time Software Engineering &amp; Web Development roles"
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <!-- QUICK INFO STRIP -->
-    <div class="quick-info-strip">
+    <div class="quick-info-strip reveal">
       <div class="info-item">
         <span class="info-label">Degree</span>
         <span class="info-value">S.Kom. (Informatics)</span>
@@ -817,7 +1065,7 @@
     </div>
 
     <!-- FEATURED PROJECTS -->
-    <section id="projects">
+    <section id="projects" class="reveal">
       <div class="section-head">
         <h2 class="section-title">Selected Projects</h2>
         <p class="section-desc">Practical web apps, operational systems, and developer tools deployed online.</p>
@@ -826,11 +1074,11 @@
       <div class="projects-grid">
         
         <!-- Project 1: Admin MBG -->
-        <div class="project-card">
+        <div class="project-card spotlight-card">
           <div class="project-top">
             <div class="project-header-row">
               <span class="project-category">Web Application</span>
-              <span class="project-badge-featured">Live Demo</span>
+              <span class="project-badge-live"><i class="fa-solid fa-circle" style="font-size: 6px;"></i> Live Demo</span>
             </div>
             <h3 class="project-name">Admin MBG (Makan Bergizi Gratis)</h3>
             <p class="project-summary">
@@ -855,11 +1103,11 @@
         </div>
 
         <!-- Project 2: Sistem Absensi Pegawai v2 -->
-        <div class="project-card">
+        <div class="project-card spotlight-card">
           <div class="project-top">
             <div class="project-header-row">
               <span class="project-category">HR Portal</span>
-              <span class="project-badge-featured">Live Demo</span>
+              <span class="project-badge-live"><i class="fa-solid fa-circle" style="font-size: 6px;"></i> Live Demo</span>
             </div>
             <h3 class="project-name">Sistem Absensi Pegawai v2</h3>
             <p class="project-summary">
@@ -883,11 +1131,11 @@
         </div>
 
         <!-- Project 3: Antigravity UI Playground -->
-        <div class="project-card">
+        <div class="project-card spotlight-card">
           <div class="project-top">
             <div class="project-header-row">
               <span class="project-category">Frontend Lab</span>
-              <span class="project-badge-featured">Live Demo</span>
+              <span class="project-badge-live"><i class="fa-solid fa-circle" style="font-size: 6px;"></i> Live Demo</span>
             </div>
             <h3 class="project-name">Antigravity UI Playground</h3>
             <p class="project-summary">
@@ -911,7 +1159,7 @@
         </div>
 
         <!-- Project 4: SPK Penilaian Kinerja Karyawan -->
-        <div class="project-card">
+        <div class="project-card spotlight-card">
           <div class="project-top">
             <div class="project-header-row">
               <span class="project-category">Decision Support System</span>
@@ -939,7 +1187,7 @@
         </div>
 
         <!-- Project 5: Bybit RSI Trading Bot -->
-        <div class="project-card">
+        <div class="project-card spotlight-card">
           <div class="project-top">
             <div class="project-header-row">
               <span class="project-category">Automation &amp; API</span>
@@ -963,7 +1211,7 @@
         </div>
 
         <!-- Project 6: Ethereum LSTM Price Prediction -->
-        <div class="project-card">
+        <div class="project-card spotlight-card">
           <div class="project-top">
             <div class="project-header-row">
               <span class="project-category">Machine Learning</span>
@@ -990,41 +1238,43 @@
     </section>
 
     <!-- THESIS / CASE STUDY -->
-    <section id="thesis">
+    <section id="thesis" class="reveal">
       <div class="section-head">
         <h2 class="section-title">Undergraduate Thesis &amp; Case Study</h2>
         <p class="section-desc">Practical research conducted for Bachelor of Computer Science degree at Universitas Bale Bandung.</p>
       </div>
 
-      <div class="thesis-card">
-        <div class="thesis-badge">
-          <i class="fa-solid fa-graduation-cap"></i> Skripsi / Tugas Akhir (2024)
-        </div>
-        <h3 class="thesis-title">
-          Sistem Pendukung Keputusan Penilaian Kinerja Karyawan Berbasis AHP-SAW Terintegrasi SOP Kedisiplinan
-        </h3>
-        <div class="thesis-meta">
-          Penulis: <span>Adli Zain Pribadi</span> &bull; Pembimbing: <span>Yudi Herdiana, M.T. &amp; Yusuf Muharam, M.Kom.</span>
-          <br>
-          Studi Kasus: <span>Reegiolla The Shoes (Cimaung, Kab. Bandung)</span> &bull; Prodi Teknik Informatika UNIBBA
-        </div>
+      <div class="thesis-card spotlight-card">
+        <div class="thesis-content">
+          <div class="thesis-badge">
+            <i class="fa-solid fa-graduation-cap"></i> Skripsi / Tugas Akhir (2024)
+          </div>
+          <h3 class="thesis-title">
+            Sistem Pendukung Keputusan Penilaian Kinerja Karyawan Berbasis AHP-SAW Terintegrasi SOP Kedisiplinan
+          </h3>
+          <div class="thesis-meta">
+            Penulis: <span>Adli Zain Pribadi</span> &bull; Pembimbing: <span>Yudi Herdiana, M.T. &amp; Yusuf Muharam, M.Kom.</span>
+            <br>
+            Studi Kasus: <span>Reegiolla The Shoes (Cimaung, Kab. Bandung)</span> &bull; Prodi Teknik Informatika UNIBBA
+          </div>
 
-        <div class="thesis-abstract">
-          <strong>Ringkasan Studi:</strong> Penilaian kinerja karyawan di industri manufaktur skala UMKM sering kali masih mengandalkan pencatatan manual yang rentan terhadap subjektivitas dan bias personal. Penelitian ini mengintegrasikan metode <em>Analytic Hierarchy Process (AHP)</em> untuk pembobotan kriteria secara konsisten dan <em>Simple Additive Weighting (SAW)</em> untuk perangkingan karyawan berdasarkan SOP kedisiplinan kerja nyata, menghasilkan sistem penilaian yang transparan dan dapat dipertanggungjawabkan.
-        </div>
+          <div class="thesis-abstract">
+            <strong>Ringkasan Studi:</strong> Penilaian kinerja karyawan di industri manufaktur skala UMKM sering kali masih mengandalkan pencatatan manual yang rentan terhadap subjektivitas dan bias personal. Penelitian ini mengintegrasikan metode <em>Analytic Hierarchy Process (AHP)</em> untuk pembobotan kriteria secara konsisten dan <em>Simple Additive Weighting (SAW)</em> untuk perangkingan karyawan berdasarkan SOP kedisiplinan kerja nyata, menghasilkan sistem penilaian yang transparan dan dapat dipertanggungjawabkan.
+          </div>
 
-        <div class="thesis-tags">
-          <span class="tag">Sistem Pendukung Keputusan (SPK)</span>
-          <span class="tag">AHP (Analytic Hierarchy Process)</span>
-          <span class="tag">SAW (Simple Additive Weighting)</span>
-          <span class="tag">PHP &amp; MySQL</span>
-          <span class="tag">Manajemen SDM</span>
+          <div class="thesis-tags">
+            <span class="tag">Sistem Pendukung Keputusan (SPK)</span>
+            <span class="tag">AHP (Analytic Hierarchy Process)</span>
+            <span class="tag">SAW (Simple Additive Weighting)</span>
+            <span class="tag">PHP &amp; MySQL</span>
+            <span class="tag">Manajemen SDM</span>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- WORK EXPERIENCE -->
-    <section id="experience">
+    <section id="experience" class="reveal">
       <div class="section-head">
         <h2 class="section-title">Work Experience</h2>
         <p class="section-desc">Practical internship and teaching experience.</p>
@@ -1033,9 +1283,9 @@
       <div class="timeline-list">
         
         <!-- Experience 1 -->
-        <div class="timeline-row">
-          <div class="timeline-date">May – Aug 2024</div>
-          <div class="timeline-content">
+        <div class="timeline-row spotlight-card">
+          <div class="timeline-inner timeline-date">May – Aug 2024</div>
+          <div class="timeline-inner timeline-content">
             <h4>Software Engineer Intern</h4>
             <div class="timeline-org">Tech Nusantara &bull; Bandung</div>
             <div class="timeline-desc">
@@ -1049,9 +1299,9 @@
         </div>
 
         <!-- Experience 2 -->
-        <div class="timeline-row">
-          <div class="timeline-date">Aug – Dec 2023</div>
-          <div class="timeline-content">
+        <div class="timeline-row spotlight-card">
+          <div class="timeline-inner timeline-date">Aug – Dec 2023</div>
+          <div class="timeline-inner timeline-content">
             <h4>Informatics Laboratory Assistant</h4>
             <div class="timeline-org">Universitas Bale Bandung (UNIBBA)</div>
             <div class="timeline-desc">
@@ -1068,7 +1318,7 @@
     </section>
 
     <!-- EDUCATION -->
-    <section id="education">
+    <section id="education" class="reveal">
       <div class="section-head">
         <h2 class="section-title">Education</h2>
         <p class="section-desc">Academic background and formal education.</p>
@@ -1077,9 +1327,9 @@
       <div class="timeline-list">
         
         <!-- Univ -->
-        <div class="timeline-row">
-          <div class="timeline-date">2020 – 2024</div>
-          <div class="timeline-content">
+        <div class="timeline-row spotlight-card">
+          <div class="timeline-inner timeline-date">2020 – 2024</div>
+          <div class="timeline-inner timeline-content">
             <h4>S1 Teknik Informatika (Bachelor of Computer Science)</h4>
             <div class="timeline-org">Universitas Bale Bandung (UNIBBA)</div>
             <div class="timeline-desc">
@@ -1089,9 +1339,9 @@
         </div>
 
         <!-- SMA -->
-        <div class="timeline-row">
-          <div class="timeline-date">2016 – 2019</div>
-          <div class="timeline-content">
+        <div class="timeline-row spotlight-card">
+          <div class="timeline-inner timeline-date">2016 – 2019</div>
+          <div class="timeline-inner timeline-content">
             <h4>SMA Negeri 1 Banjaran</h4>
             <div class="timeline-org">Jurusan MIPA (Matematika &amp; Ilmu Pengetahuan Alam)</div>
             <div class="timeline-desc">
@@ -1101,9 +1351,9 @@
         </div>
 
         <!-- SMP -->
-        <div class="timeline-row">
-          <div class="timeline-date">2013 – 2016</div>
-          <div class="timeline-content">
+        <div class="timeline-row spotlight-card">
+          <div class="timeline-inner timeline-date">2013 – 2016</div>
+          <div class="timeline-inner timeline-content">
             <h4>SMP Negeri 2 Banjaran</h4>
             <div class="timeline-org">Pendidikan Menengah Pertama</div>
             <div class="timeline-desc">
@@ -1116,53 +1366,59 @@
     </section>
 
     <!-- TECHNICAL SKILLS -->
-    <section id="skills">
+    <section id="skills" class="reveal">
       <div class="section-head">
         <h2 class="section-title">Technical Skills</h2>
         <p class="section-desc">Technologies and tools I work with.</p>
       </div>
 
       <div class="skills-block">
-        <div class="skill-box">
-          <h4><i class="fa-solid fa-code"></i> Languages</h4>
-          <div class="skill-pills">
-            <span class="tag">JavaScript (ES6+)</span>
-            <span class="tag">PHP</span>
-            <span class="tag">Python</span>
-            <span class="tag">Go (Basic)</span>
-            <span class="tag">HTML5 / CSS3</span>
-            <span class="tag">SQL</span>
+        <div class="skill-box spotlight-card">
+          <div class="skill-inner">
+            <h4><i class="fa-solid fa-code"></i> Languages</h4>
+            <div class="skill-pills">
+              <span class="tag">JavaScript (ES6+)</span>
+              <span class="tag">PHP</span>
+              <span class="tag">Python</span>
+              <span class="tag">Go (Basic)</span>
+              <span class="tag">HTML5 / CSS3</span>
+              <span class="tag">SQL</span>
+            </div>
           </div>
         </div>
 
-        <div class="skill-box">
-          <h4><i class="fa-solid fa-layer-group"></i> Frameworks &amp; Libs</h4>
-          <div class="skill-pills">
-            <span class="tag">React.js</span>
-            <span class="tag">Bootstrap</span>
-            <span class="tag">Tailwind CSS</span>
-            <span class="tag">SheetJS</span>
-            <span class="tag">Chart.js</span>
-            <span class="tag">TensorFlow</span>
+        <div class="skill-box spotlight-card">
+          <div class="skill-inner">
+            <h4><i class="fa-solid fa-layer-group"></i> Frameworks &amp; Libs</h4>
+            <div class="skill-pills">
+              <span class="tag">React.js</span>
+              <span class="tag">Bootstrap</span>
+              <span class="tag">Tailwind CSS</span>
+              <span class="tag">SheetJS</span>
+              <span class="tag">Chart.js</span>
+              <span class="tag">TensorFlow</span>
+            </div>
           </div>
         </div>
 
-        <div class="skill-box">
-          <h4><i class="fa-solid fa-database"></i> Database &amp; Tools</h4>
-          <div class="skill-pills">
-            <span class="tag">MySQL</span>
-            <span class="tag">PostgreSQL</span>
-            <span class="tag">Git &amp; GitHub</span>
-            <span class="tag">VS Code</span>
-            <span class="tag">REST APIs</span>
-            <span class="tag">Linux CLI</span>
+        <div class="skill-box spotlight-card">
+          <div class="skill-inner">
+            <h4><i class="fa-solid fa-database"></i> Database &amp; Tools</h4>
+            <div class="skill-pills">
+              <span class="tag">MySQL</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Git &amp; GitHub</span>
+              <span class="tag">VS Code</span>
+              <span class="tag">REST APIs</span>
+              <span class="tag">Linux CLI</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact">
+    <section id="contact" class="reveal">
       <div class="contact-card">
         <h3>Let's Connect</h3>
         <p>
@@ -1189,7 +1445,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div>&copy; 2026 Adli Zain Pribadi. All rights reserved.</div>
-      <div>Hosted on GitHub Pages</div>
+      <div>git commit 3243cdc &bull; Hosted on GitHub Pages</div>
       <div><a href="#" style="color: var(--text-muted);"><i class="fa-solid fa-arrow-up"></i> Top</a></div>
     </div>
   </footer>
@@ -1201,6 +1457,7 @@
   </div>
 
   <script>
+    // Copy Email
     function copyEmail() {
       const email = 'adlizainpribadi65@gmail.com';
       navigator.clipboard.writeText(email).then(() => {
@@ -1225,6 +1482,100 @@
         toast.classList.remove('show');
       }, 2500);
     }
+
+    // TYPEWRITER EFFECT
+    const words = [
+      "Web Applications & Systems",
+      "Decision Support (AHP & SAW)",
+      "Internal Tools & Automation",
+      "Informatics Graduate (UNIBBA)"
+    ];
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typeTarget = document.getElementById('typewriter');
+
+    function typeEffect() {
+      if (!typeTarget) return;
+      const currentWord = words[wordIndex];
+      
+      if (isDeleting) {
+        typeTarget.innerText = currentWord.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        typeTarget.innerText = currentWord.substring(0, charIndex + 1);
+        charIndex++;
+      }
+
+      let speed = isDeleting ? 40 : 80;
+
+      if (!isDeleting && charIndex === currentWord.length) {
+        speed = 1800; // pause at end
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+        speed = 400; // pause before next word
+      }
+
+      setTimeout(typeEffect, speed);
+    }
+    typeEffect();
+
+    // INTERACTIVE TERMINAL EMULATOR
+    const termCommands = {
+      whoami: {
+        cmd: "whoami --verbose",
+        res: `[name]: "Adli Zain Pribadi, S.Kom."<br>[degree]: "Bachelor of Computer Science (Universitas Bale Bandung)"<br>[location]: "Bandung, Indonesia"<br>[status]: "Ready for Full-Time Software Engineering &amp; Web Development roles"`
+      },
+      stack: {
+        cmd: "cat stack.json | jq .core",
+        res: `{<br>&nbsp;&nbsp;"languages": ["JavaScript", "PHP", "Python", "SQL"],<br>&nbsp;&nbsp;"frameworks": ["React", "Bootstrap", "Tailwind", "SheetJS"],<br>&nbsp;&nbsp;"systems": ["Decision Support (AHP-SAW)", "REST APIs", "Git"]<br>}`
+      },
+      git: {
+        cmd: "git log -2 --oneline",
+        res: `<span style="color:#60a5fa;">3243cdc</span> refactor: redesign UI to clean, authentic developer aesthetic<br><span style="color:#60a5fa;">f5e4651</span> feat: add antigravity-ui-playground with live demo link`
+      },
+      contact: {
+        cmd: "./contact.sh",
+        res: `➜ Email: adlizainpribadi65@gmail.com<br>➜ GitHub: https://github.com/adlizainpribadi65-alt<br>➜ Status: Open for opportunities`
+      }
+    };
+
+    function runTermCmd(key) {
+      document.querySelectorAll('.term-btn').forEach(btn => btn.classList.remove('active'));
+      const activeBtn = document.getElementById('btn-' + key);
+      if (activeBtn) activeBtn.classList.add('active');
+
+      const data = termCommands[key];
+      if (!data) return;
+
+      const cmdEl = document.getElementById('termExecCmd');
+      const resEl = document.getElementById('termExecResult');
+
+      cmdEl.innerText = data.cmd;
+      resEl.innerHTML = data.res;
+    }
+
+    // SPOTLIGHT MOUSE TRACKING
+    document.querySelectorAll('.spotlight-card').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        card.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+        card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
+      });
+    });
+
+    // SCROLL REVEAL (IntersectionObserver)
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
   </script>
 </body>
 </html>
