@@ -36,8 +36,9 @@ A world-class, ultra-modern developer portfolio engineered for **Adli Zain Priba
    - **Software Engineer Intern** @ Tech Nusantara (Golang microservices, payment gateways, PostgreSQL optimization).
    - **Informatics Lab Teaching Assistant** @ Universitas Bale Bandung (Algorithm & Data Structures mentoring).
    - **Bachelor of Computer Science (S.Kom.)** @ Universitas Bale Bandung (2020–2024).
+   - **SMA Negeri 1 Banjaran** (MIPA, 2016–2019) & **SMP Negeri 2 Banjaran** (2013–2016).
 
-5. **Undergraduate Thesis & Industrial Case Study**
+6. **Undergraduate Thesis & Industrial Case Study**
    - Title: *SISTEM PENDUKUNG KEPUTUSAN PENILAIAN KINERJA KARYAWAN BERBASIS AHP-SAW TERINTEGRASI SOP KEDISIPLINAN*
    - Author: Adli Zain Pribadi (Advised by: Yudi Herdiana, Yusuf Muharam)
    - Case Study: Reegiolla The Shoes (Cimaung, Kab. Bandung)
