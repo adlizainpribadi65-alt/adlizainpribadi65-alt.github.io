@@ -26,10 +26,16 @@ A world-class, ultra-modern developer portfolio engineered for **Adli Zain Priba
 
 4. **Featured Case Studies (With Live Demos & Code)**
    - **Admin MBG (Makan Bergizi Gratis)** — Enterprise HR & Administration portal with 10 customized Excel export modules ([Live Demo](https://adlizainpribadi65-alt.github.io/Aplikasi-Admin-MBG/)).
-   - **SPK Karyawan AHP-SAW Engine** — Scientific decision support system integrating Analytic Hierarchy Process & Simple Additive Weighting ([GitHub](https://github.com/adlizainpribadi65-alt/spk-karyawan-saw)).
-   - **Ethereum Price Prediction (LSTM)** — Deep learning time-series neural network ([GitHub](https://github.com/adlizainpribadi65-alt/ethereum-price-prediction-lstm)).
-   - **Bybit Automated RSI Trading Bot** — Algorithmic crypto execution engine ([GitHub](https://github.com/adlizainpribadi65-alt/bybit-rsi-crypto-bot)).
-   - **Sistem Absensi Pegawai v2** & **Portal Seleksi Beasiswa Mahasiswa**.
+   - **Smart Analytics Dashboard Enterprise** — Real-time business telemetry and KPI analytics dashboard (React.js, Node.js, Express, MongoDB).
+   - **AI Edge Object Detection & Traffic Vision** — Quantized lightweight vehicle detection engine for resource-constrained edge hardware (Python, TensorFlow Lite, OpenCV).
+   - **GoRide Microservices Backend** — Scalable ride-hailing backend architecture with gRPC messaging and Docker (Golang, PostgreSQL).
+   - **SPK Karyawan AHP-SAW Engine** — Scientific decision support system integrating Analytic Hierarchy Process & Simple Additive Weighting at Reegiolla The Shoes ([GitHub](https://github.com/adlizainpribadi65-alt/spk-karyawan-saw)).
+   - **Ethereum Price Prediction (LSTM)** & **Bybit Automated RSI Trading Bot**.
+
+5. **Professional Experience & Academics**
+   - **Software Engineer Intern** @ Tech Nusantara (Golang microservices, payment gateways, PostgreSQL optimization).
+   - **Informatics Lab Teaching Assistant** @ Universitas Bale Bandung (Algorithm & Data Structures mentoring).
+   - **Bachelor of Computer Science (S.Kom.)** @ Universitas Bale Bandung (2020–2024).
 
 5. **Undergraduate Thesis & Industrial Case Study**
    - Title: *SISTEM PENDUKUNG KEPUTUSAN PENILAIAN KINERJA KARYAWAN BERBASIS AHP-SAW TERINTEGRASI SOP KEDISIPLINAN*
