@@ -23,10 +23,11 @@ A world-class, ultra-modern developer portfolio engineered for **Adli Zain Priba
    - **Visi:** Menjadi pribadi yang profesional dan kompeten, terus belajar, mengembangkan kemampuan, serta memberikan kontribusi positif bagi perusahaan.
    - **Misi:** Meningkatkan kompetensi, menjaga profesionalisme, membangun kerja sama, serta memberikan kontribusi terbaik bagi perusahaan.
 
-3. **Core Technical Competencies**
+3. **Core Technical Competencies & Tools**
    - **Full-Stack Web:** React.js, Next.js, JavaScript (ES6+), TypeScript, Tailwind CSS, SheetJS.
    - **AI & Quantitative:** Python, TensorFlow, LSTM Deep Learning, AHP-SAW MCDM, OpenCV, Pandas.
    - **Backend & Database:** Node.js, Express, PHP/Laravel, MySQL, PostgreSQL, Docker, Git.
+   - **Software & Applications:** Visual Studio Code, XAMPP, MySQL, phpMyAdmin, GitHub, Figma, Microsoft Word, Microsoft Excel, Microsoft PowerPoint, Canva.
 
 4. **Featured Case Studies (With Live Demos & Code)**
    - **Admin MBG (Makan Bergizi Gratis)** — Enterprise HR & Administration portal with 10 customized Excel export modules ([Live Demo](https://adlizainpribadi65-alt.github.io/Aplikasi-Admin-MBG/)).

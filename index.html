@@ -1020,6 +1020,73 @@
       line-height: 1.55;
     }
 
+    /* APLIKASI & SOFTWARE YANG DIKUASAI */
+    .tools-section {
+      margin-top: 28px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .tools-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .tools-title i {
+      color: var(--accent-text);
+    }
+
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+    }
+
+    .tool-card {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 16px 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    .tool-card:hover {
+      border-color: var(--border-focus);
+      background: var(--card-hover);
+      transform: translateY(-2px);
+    }
+
+    .tool-icon {
+      font-size: 1.7rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 38px;
+    }
+
+    .tool-name {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .tool-cat {
+      font-size: 0.7rem;
+      color: var(--text-subtle);
+      font-family: var(--font-mono);
+    }
+
     /* RESPONSIVE */
     @media (max-width: 768px) {
       .hero-grid {
@@ -1047,6 +1114,9 @@
       }
       .skills-block {
         grid-template-columns: 1fr;
+      }
+      .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
       .nav-links {
         display: none;
@@ -1528,11 +1598,13 @@
       </div>
     </section>
 
-    <!-- KEAHLIAN TEKNIS -->
+    <!-- KEAHLIAN TEKNIS & APLIKASI -->
     <section id="skills" class="reveal">
       <div class="section-head">
-        <h2 class="section-title">Keahlian Teknis</h2>
-        <p class="section-desc">Teknologi, bahasa pemrograman, dan perkakas yang biasa saya gunakan.</p>
+        <h2 class="section-title">Keahlian &amp; Aplikasi yang Dikuasai</h2>
+        <p class="section-desc" style="max-width: 720px; line-height: 1.7;">
+          Lulusan S1 Teknik Informatika Universitas Bale Bandung dengan pemahaman di bidang pemrograman, pengembangan web, dan pengelolaan basis data. Memiliki semangat belajar, kemampuan analitis, serta komitmen untuk berkembang secara profesional.
+        </p>
       </div>
 
       <div class="skills-block">
@@ -1566,15 +1638,114 @@
 
         <div class="skill-box spotlight-card">
           <div class="skill-inner">
-            <h4><i class="fa-solid fa-database"></i> Database &amp; Tools</h4>
+            <h4><i class="fa-solid fa-database"></i> Database &amp; Arsitektur</h4>
             <div class="skill-pills">
               <span class="tag">MySQL</span>
               <span class="tag">PostgreSQL</span>
-              <span class="tag">Git &amp; GitHub</span>
-              <span class="tag">VS Code</span>
               <span class="tag">REST APIs</span>
+              <span class="tag">Git Versioning</span>
+              <span class="tag">Sistem SPK</span>
               <span class="tag">Linux CLI</span>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- APLIKASI & SOFTWARE YANG DIKUASAI -->
+      <div class="tools-section">
+        <h3 class="tools-title">
+          <i class="fa-solid fa-toolbox"></i> Aplikasi &amp; Perangkat Lunak
+        </h3>
+        
+        <div class="tools-grid">
+          <!-- 1. VS Code -->
+          <div class="tool-card spotlight-card">
+            <div class="tool-icon" style="color: #007acc;">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <div class="tool-name">Visual Code</div>
+            <div class="tool-cat">Code Editor</div>
+          </div>
+
+          <!-- 2. XAMPP -->
+          <div class="tool-card spotlight-card">
+            <div class="tool-icon" style="color: #fb7a24;">
+              <i class="fa-solid fa-server"></i>
+            </div>
+            <div class="tool-name">Xampp</div>
+            <div class="tool-cat">Local Server</div>
+          </div>
+
+          <!-- 3. MySQL -->
+          <div class="tool-card spotlight-card">
+            <div class="tool-icon" style="color: #00758f;">
+              <i class="fa-solid fa-database"></i>
+            </div>
+            <div class="tool-name">MySQL</div>
+            <div class="tool-cat">RDBMS</div>
+          </div>
+
+          <!-- 4. phpMyAdmin -->
+          <div class="tool-card spotlight-card">
+            <div class="tool-icon" style="color: #f3702a;">
+              <i class="fa-solid fa-table-columns"></i>
+            </div>
+            <div class="tool-name">PHP My Admin</div>
+            <div class="tool-cat">DB Admin</div>
+          </div>
+
+          <!-- 5. GitHub -->
+          <div class="tool-card spotlight-card">
+            <div class="tool-icon" style="color: #f4f4f6;">
+              <i class="fa-brands fa-github"></i>
+            </div>
+            <div class="tool-name">Github</div>
+            <div class="tool-cat">VCS &amp; CI/CD</div>
+          </div>
+
+          <!-- 6. Figma -->
+          <div class="tool-card spotlight-card">
+            <div class="tool-icon" style="color: #f24e1e;">
+              <i class="fa-brands fa-figma"></i>
+            </div>
+            <div class="tool-name">Figma</div>
+            <div class="tool-cat">UI/UX Design</div>
+          </div>
+
+          <!-- 7. Ms Word -->
+          <div class="tool-card spotlight-card">
+            <div class="tool-icon" style="color: #2b579a;">
+              <i class="fa-solid fa-file-word"></i>
+            </div>
+            <div class="tool-name">Ms Word</div>
+            <div class="tool-cat">Dokumentasi</div>
+          </div>
+
+          <!-- 8. Ms Excel -->
+          <div class="tool-card spotlight-card">
+            <div class="tool-icon" style="color: #217346;">
+              <i class="fa-solid fa-file-excel"></i>
+            </div>
+            <div class="tool-name">Ms Excel</div>
+            <div class="tool-cat">Olah Data</div>
+          </div>
+
+          <!-- 9. Ms PowerPoint -->
+          <div class="tool-card spotlight-card">
+            <div class="tool-icon" style="color: #d24726;">
+              <i class="fa-solid fa-file-powerpoint"></i>
+            </div>
+            <div class="tool-name">Ms Powerpoint</div>
+            <div class="tool-cat">Presentasi</div>
+          </div>
+
+          <!-- 10. Canva -->
+          <div class="tool-card spotlight-card">
+            <div class="tool-icon" style="color: #00c4cc;">
+              <i class="fa-solid fa-palette"></i>
+            </div>
+            <div class="tool-name">Canva</div>
+            <div class="tool-cat">Grafis &amp; Visual</div>
           </div>
         </div>
       </div>
