@@ -17,7 +17,7 @@ A world-class, ultra-modern developer portfolio engineered for **Adli Zain Priba
    - 15+ Active Repositories on GitHub.
    - 10+ Production & Web Applications.
    - 1 Published Scientific Research Paper.
-   - 3.85 / 4.00 Cumulative Academic GPA.
+   - 100% Production Code Delivery & Practical Engineering Focus.
 
 3. **Core Technical Competencies**
    - **Full-Stack Web:** React.js, Next.js, JavaScript (ES6+), TypeScript, Tailwind CSS, SheetJS.
