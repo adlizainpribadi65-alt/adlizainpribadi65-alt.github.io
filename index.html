@@ -1779,65 +1779,101 @@
       pointer-events: auto;
     }
 
-    /* SCROLL REVEAL ANIMATION */
+    /* ELEGANT SCROLL MOTION & REVEALS */
     .reveal {
       opacity: 0;
-      transform: translateY(22px);
-      transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+      transform: translateY(28px) scale(0.98);
+      transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
     }
 
     .reveal.visible {
       opacity: 1;
-      transform: translateY(0);
+      transform: translateY(0) scale(1);
     }
 
-    /* STAGGER REVEAL DELAYS */
+    /* Staggered card appearance inside revealed sections */
+    .reveal.visible .project-card,
+    .reveal.visible .value-card,
+    .reveal.visible .cert-card,
+    .reveal.visible .skill-box,
+    .reveal.visible .tool-card {
+      animation: smoothRise 0.65s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    @keyframes smoothRise {
+      from {
+        opacity: 0;
+        transform: translateY(18px) scale(0.97);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    /* Stagger reveal delays */
     .delay-1 { transition-delay: 0.08s; }
     .delay-2 { transition-delay: 0.16s; }
     .delay-3 { transition-delay: 0.24s; }
 
-    /* RESPONSIVE & MOBILE POLISH (TIDAK PRESS / TETAP RAPI) */
+    /* Sticky Header Scrolled Elevation */
+    header.site-header.scrolled {
+      background: rgba(9, 9, 13, 0.94);
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
+      border-bottom-color: rgba(255, 255, 255, 0.12);
+    }
+    html[data-theme="light"] header.site-header.scrolled {
+      background: rgba(255, 255, 255, 0.94);
+      box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.1);
+      border-bottom-color: rgba(0, 0, 0, 0.1);
+    }
+
+    /* ========================================================
+       RESPONSIVE & MOBILE 2-BY-2 GRID SYSTEM (TAMPIL 2-2 DI HP)
+       ======================================================== */
     @media (max-width: 860px) {
       .container {
-        padding: 0 16px;
+        padding: 0 12px;
       }
       .site-header {
-        padding-bottom: 6px;
+        padding-bottom: 5px;
       }
       .nav-inner {
         height: auto;
         flex-wrap: wrap;
-        padding-top: 10px;
-        padding-bottom: 6px;
-        gap: 8px;
+        padding-top: 8px;
+        padding-bottom: 4px;
+        gap: 6px;
       }
       .brand {
-        gap: 10px;
+        gap: 8px;
       }
       .brand-avatar-rgb {
-        width: 36px;
-        height: 36px;
+        width: 34px;
+        height: 34px;
         padding: 2px;
       }
       .brand-name {
-        font-size: 0.92rem;
+        font-size: 0.88rem;
       }
       .brand-role {
-        font-size: 0.68rem;
+        font-size: 0.65rem;
       }
       .nav-actions {
-        gap: 8px;
+        gap: 6px;
       }
       .btn-rgb-glow {
-        font-size: 0.8rem;
-        padding: 7px 12px;
+        font-size: 0.76rem;
+        padding: 6px 10px;
+        border-radius: 8px;
       }
       .theme-toggle-btn {
-        width: 36px;
-        height: 36px;
-        font-size: 0.95rem;
+        width: 34px;
+        height: 34px;
+        font-size: 0.9rem;
       }
-      /* Menu Kapsul tetap tampil rapi, bisa digeser horizontal di HP */
+      /* Menu Kapsul Swipeable */
       .nav-links {
         display: flex;
         width: 100%;
@@ -1846,70 +1882,227 @@
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
-        padding: 6px 8px;
-        gap: 6px;
+        padding: 5px 6px;
+        gap: 5px;
         margin-top: 2px;
       }
       .nav-links::-webkit-scrollbar {
         display: none;
       }
       .nav-links a {
-        font-size: 0.78rem;
-        padding: 5px 10px;
+        font-size: 0.76rem;
+        padding: 5px 9px;
         flex-shrink: 0;
       }
       .hero-section {
-        padding: 40px 0 24px;
+        padding: 32px 0 20px;
       }
       .hero-grid {
         grid-template-columns: 1fr;
-        gap: 24px;
+        gap: 20px;
       }
       .hero-name {
-        font-size: 1.95rem;
-        line-height: 1.22;
+        font-size: 1.85rem;
+        line-height: 1.2;
       }
       .hero-bio {
-        font-size: 0.92rem;
+        font-size: 0.88rem;
       }
       .hero-avatar-card {
-        max-width: 180px;
+        max-width: 160px;
         margin: 0 auto;
       }
+
+      /* 1. Value Proposition: 2 Kolom (2-2) */
       .value-prop-strip {
-        grid-template-columns: 1fr;
-        gap: 12px;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px;
       }
+      .value-card {
+        padding: 12px 10px;
+      }
+      .value-card-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 0.88rem;
+        margin-bottom: 6px;
+      }
+      .value-card h4 {
+        font-size: 0.82rem;
+        margin-bottom: 3px;
+      }
+      .value-card p {
+        font-size: 0.72rem;
+        line-height: 1.35;
+      }
+
+      /* 2. Quick Info: 2 Kolom (2-2) */
       .quick-info-strip {
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-        padding: 14px;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px;
+        padding: 10px;
       }
+      .quick-info-num {
+        font-size: 1.35rem;
+      }
+      .quick-info-label {
+        font-size: 0.7rem;
+      }
+
+      /* 3. Portofolio Proyek: 2 Kolom (2-2) Kompak */
       .projects-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px;
       }
       .project-card {
-        padding: 20px 18px;
+        padding: 14px 10px;
       }
-      .certifications-grid {
-        grid-template-columns: 1fr;
+      .project-header-row {
+        margin-bottom: 6px;
       }
+      .project-category {
+        font-size: 0.65rem;
+      }
+      .project-badge-live {
+        font-size: 0.6rem;
+        padding: 2px 6px;
+      }
+      .project-title-wrapper {
+        gap: 6px;
+        margin-bottom: 6px;
+      }
+      .project-icon-box {
+        width: 30px;
+        height: 30px;
+        font-size: 0.85rem;
+        border-radius: 7px;
+      }
+      .project-title-wrapper h3 {
+        font-size: 0.86rem;
+        line-height: 1.25;
+      }
+      .project-desc {
+        font-size: 0.72rem;
+        line-height: 1.38;
+        margin-bottom: 8px;
+      }
+      .project-impact {
+        font-size: 0.68rem;
+        padding: 5px 6px;
+        margin-bottom: 8px;
+        line-height: 1.32;
+      }
+      .project-tech {
+        gap: 4px;
+        margin-bottom: 8px;
+      }
+      .project-tech .tag {
+        font-size: 0.64rem;
+        padding: 2px 5px;
+      }
+      .project-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+      }
+      .project-links a {
+        font-size: 0.72rem;
+        gap: 4px;
+      }
+
+      /* 4. Visi & Misi: 2 Kolom (2-2) */
       .vision-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px;
       }
+      .vision-card {
+        padding: 14px 10px;
+      }
+      .vision-title {
+        font-size: 0.9rem;
+        margin-bottom: 6px;
+      }
+      .vision-body {
+        font-size: 0.75rem;
+        padding: 8px;
+        margin-bottom: 6px;
+        line-height: 1.4;
+      }
+      .vision-commitment {
+        font-size: 0.68rem;
+      }
+
+      /* 5. Sertifikasi: 2 Kolom (2-2) */
+      .certifications-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px;
+      }
+      .cert-card {
+        padding: 12px 10px;
+        gap: 8px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .cert-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 0.95rem;
+      }
+      .cert-card h4 {
+        font-size: 0.82rem;
+        line-height: 1.25;
+      }
+      .cert-org {
+        font-size: 0.68rem;
+      }
+      .cert-verify-link {
+        font-size: 0.68rem;
+      }
+
+      /* 6. Skills Box: 2 Kolom (2-2) */
+      .skills-block {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px;
+      }
+      .skills-block .skill-box:last-child {
+        grid-column: span 2;
+      }
+      .skill-box {
+        padding: 12px 10px;
+      }
+      .skill-inner h4 {
+        font-size: 0.82rem;
+        margin-bottom: 6px;
+      }
+      .skill-pills .tag {
+        font-size: 0.65rem;
+        padding: 2px 6px;
+      }
+
+      /* 7. Tools Grid: 2 Kolom (2-2) */
+      .tools-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 6px;
+      }
+      .tool-card {
+        padding: 10px 8px;
+      }
+      .tool-icon {
+        font-size: 1.1rem;
+      }
+      .tool-name {
+        font-size: 0.75rem;
+      }
+      .tool-cat {
+        font-size: 0.65rem;
+      }
+
       .thesis-highlights {
         grid-template-columns: 1fr;
       }
       .timeline-row {
         grid-template-columns: 1fr;
         gap: 6px;
-      }
-      .skills-block {
-        grid-template-columns: 1fr;
-      }
-      .tools-grid {
-        grid-template-columns: repeat(2, 1fr);
       }
       .contact-buttons-wrap {
         flex-direction: column;
@@ -3028,9 +3221,19 @@
           entry.target.classList.add('visible');
         }
       });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
     document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // Dynamic Header elevation & shadow on scroll
+    const siteHeaderEl = document.getElementById('siteHeader');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 25) {
+        siteHeaderEl.classList.add('scrolled');
+      } else {
+        siteHeaderEl.classList.remove('scrolled');
+      }
+    }, { passive: true });
 
     // 9. THEME TOGGLE (LIGHT & DARK MODE)
     const themeToggleBtn = document.getElementById('themeToggle');
