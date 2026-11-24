@@ -90,9 +90,18 @@
       transform: translateY(-1px);
     }
 
+    /* Document Viewport Wrapper (Preserves exact desktop CV layout on mobile without squishing) */
+    .cv-viewport {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 24px;
+    }
+
     /* CV Document Container */
     .cv-sheet {
-      max-width: 860px;
+      width: 860px;
+      min-width: 860px;
       margin: 0 auto;
       background: var(--bg-card);
       border-radius: 12px;
@@ -354,35 +363,27 @@
       }
     }
 
-    /* Responsive for Tablet & Mobile */
-    @media (max-width: 768px) {
+    /* Mobile Layout Polish: Maintains authentic document format without collapsing */
+    .mobile-zoom-hint {
+      display: none;
+    }
+
+    @media (max-width: 890px) {
       body {
-        padding: 12px 8px;
+        padding: 12px 6px;
       }
 
-      .cv-header {
-        flex-direction: column;
+      .mobile-zoom-hint {
+        display: block;
         text-align: center;
-        padding: 24px 18px;
-        gap: 16px;
-      }
-
-      .cv-contact-pills {
-        justify-content: center;
-      }
-
-      .cv-body {
-        grid-template-columns: 1fr;
-      }
-
-      .cv-sidebar {
-        border-right: none;
-        border-bottom: 1px solid var(--border);
-        padding: 24px 18px;
-      }
-
-      .cv-main {
-        padding: 24px 18px;
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        margin: 0 auto 12px;
+        background: #e2e8f0;
+        padding: 6px 14px;
+        border-radius: 999px;
+        width: fit-content;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
       }
     }
   </style>
@@ -399,8 +400,13 @@
     </button>
   </div>
 
-  <!-- Document Sheet -->
-  <div class="cv-sheet">
+  <div class="mobile-zoom-hint no-print">
+    <i class="fa-solid fa-arrows-left-right"></i> Format dokumen asli &bull; Geser horizontal atau cubit layar untuk zoom
+  </div>
+
+  <!-- Document Viewport for Mobile & Desktop -->
+  <div class="cv-viewport">
+    <div class="cv-sheet">
     
     <!-- HEADER -->
     <header class="cv-header">
@@ -581,6 +587,7 @@
 
     </div>
 
+  </div>
   </div>
 
 </body>
