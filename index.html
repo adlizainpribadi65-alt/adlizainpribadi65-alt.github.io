@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adli Zain Pribadi — Software Engineer</title>
+  <title>Adli Zain Pribadi — Software Engineer & Web Developer</title>
   
   <!-- Primary Meta Tags -->
-  <meta name="title" content="Adli Zain Pribadi — Software Engineer">
-  <meta name="description" content="Portofolio resmi Adli Zain Pribadi. Lulusan Sarjana Komputer (S.Kom.) Teknik Informatika Universitas Bale Bandung. Mengembangkan aplikasi web, sistem operasional internal, dan algoritma pendukung keputusan.">
+  <meta name="title" content="Adli Zain Pribadi — Software Engineer & Web Developer">
+  <meta name="description" content="Portofolio resmi Adli Zain Pribadi, S.Kom. Lulusan S1 Teknik Informatika Universitas Bale Bandung. Spesialis pengembangan aplikasi web, dashboard operasional, otomasi data, dan sistem pendukung keputusan (SPK). Siap berkontribusi untuk kemajuan perusahaan.">
   <meta name="author" content="Adli Zain Pribadi">
 
   <!-- Open Graph / Media Sosial -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://adlizainpribadi65-alt.github.io/">
-  <meta property="og:title" content="Adli Zain Pribadi — Software Engineer">
-  <meta property="og:description" content="Portofolio resmi dan arsip proyek Adli Zain Pribadi.">
+  <meta property="og:title" content="Adli Zain Pribadi — Software Engineer & Web Developer">
+  <meta property="og:description" content="Portofolio resmi dan profil profesional Adli Zain Pribadi, S.Kom. Solusi teknologi terukur untuk efisiensi bisnis.">
   <meta property="og:image" content="assets/adli.jpeg">
 
   <!-- Favicon -->
@@ -23,36 +23,38 @@
   <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <style>
     /* ==========================================================================
-       MODERN DEVELOPER THEME — ELEGANT TECH AESTHETIC
-       Crafted dark mode with blueprint grid, interactive terminal, spotlight sheen
+       MODERN DEVELOPER THEME — ENTERPRISE TECH AESTHETIC
+       Clean, authoritative, high-performance styling with subtle motion physics
        ========================================================================== */
     :root {
-      --bg: #09090c;
-      --bg-subtle: #111116;
-      --card-bg: #141419;
-      --card-hover: #191921;
-      --border: #23232b;
-      --border-subtle: #1a1a22;
+      --bg: #09090d;
+      --bg-subtle: #111117;
+      --card-bg: #14141c;
+      --card-hover: #1a1a24;
+      --border: #232330;
+      --border-subtle: #191924;
       --border-focus: #3b82f6;
       
-      --text: #f4f4f6;
-      --text-muted: #9c9ca8;
-      --text-subtle: #686875;
+      --text: #f4f4f7;
+      --text-muted: #9ea0b0;
+      --text-subtle: #67697b;
       
       --accent: #2563eb;
       --accent-soft: rgba(37, 99, 235, 0.12);
+      --accent-border: rgba(59, 130, 246, 0.28);
       --accent-text: #60a5fa;
       
       --success: #10b981;
-      --success-soft: rgba(16, 185, 129, 0.1);
+      --success-soft: rgba(16, 185, 129, 0.12);
+      --success-border: rgba(16, 185, 129, 0.25);
       --success-text: #34d399;
 
-      --radius: 12px;
+      --radius: 14px;
       --radius-sm: 8px;
       --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       --font-mono: 'JetBrains Mono', monospace;
@@ -64,18 +66,73 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       background-color: var(--bg);
       color: var(--text);
       font-family: var(--font-sans);
-      line-height: 1.65;
+      line-height: 1.68;
       font-size: 15px;
       position: relative;
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Background Blueprint Grid Canvas */
+    /* Reading Progress Bar */
+    .scroll-progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #2563eb, #60a5fa, #34d399);
+      width: 0%;
+      z-index: 100;
+      transition: width 0.08s ease-out;
+    }
+
+    /* Ambient Background Lights */
+    .ambient-glow-1 {
+      position: absolute;
+      top: 80px;
+      right: 5%;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(37, 99, 235, 0.12) 0%, rgba(37, 99, 235, 0) 70%);
+      filter: blur(80px);
+      pointer-events: none;
+      z-index: 0;
+      animation: floatGlow 12s ease-in-out infinite alternate;
+    }
+
+    .ambient-glow-2 {
+      position: absolute;
+      top: 900px;
+      left: 2%;
+      width: 450px;
+      height: 450px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.08) 0%, rgba(16, 185, 129, 0) 70%);
+      filter: blur(90px);
+      pointer-events: none;
+      z-index: 0;
+      animation: floatGlowReverse 14s ease-in-out infinite alternate;
+    }
+
+    @keyframes floatGlow {
+      0% { transform: translateY(0px) scale(0.95); opacity: 0.6; }
+      100% { transform: translateY(40px) scale(1.1); opacity: 0.9; }
+    }
+
+    @keyframes floatGlowReverse {
+      0% { transform: translateY(30px) scale(1.05); opacity: 0.5; }
+      100% { transform: translateY(-30px) scale(0.95); opacity: 0.85; }
+    }
+
+    /* Background Blueprint Grid */
     body::before {
       content: '';
       position: fixed;
@@ -84,7 +141,7 @@
       right: 0;
       bottom: 0;
       background-image: 
-        radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.06) 0%, transparent 50%),
+        radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.07) 0%, transparent 50%),
         linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
       background-size: 100% 100%, 36px 36px, 36px 36px;
@@ -100,7 +157,7 @@
     }
 
     .container {
-      max-width: 960px;
+      max-width: 980px;
       margin: 0 auto;
       padding: 0 24px;
       position: relative;
@@ -112,18 +169,18 @@
       position: sticky;
       top: 0;
       z-index: 50;
-      background: rgba(9, 9, 12, 0.85);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      background: rgba(9, 9, 13, 0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border-subtle);
-      transition: all 0.2s ease;
+      transition: all 0.25s ease;
     }
 
     .nav-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 64px;
+      height: 66px;
     }
 
     .brand {
@@ -131,22 +188,37 @@
       align-items: center;
       gap: 12px;
       font-weight: 700;
-      font-size: 1rem;
+      font-size: 1.02rem;
       letter-spacing: -0.01em;
+      transition: transform 0.2s ease;
+    }
+
+    .brand:hover {
+      transform: translateY(-1px);
     }
 
     .brand img {
-      width: 32px;
-      height: 32px;
+      width: 34px;
+      height: 34px;
       border-radius: 50%;
       object-fit: cover;
-      border: 1px solid var(--border);
+      border: 1.5px solid var(--border-focus);
+      box-shadow: 0 0 10px rgba(59, 130, 246, 0.25);
+    }
+
+    .brand-role {
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: var(--accent-text);
+      display: block;
+      font-family: var(--font-mono);
+      margin-top: -2px;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 22px;
+      gap: 20px;
       list-style: none;
     }
 
@@ -154,42 +226,48 @@
       color: var(--text-muted);
       font-size: 0.88rem;
       font-weight: 500;
-      transition: color 0.15s ease;
+      transition: color 0.18s ease, transform 0.18s ease;
+      display: inline-block;
     }
 
     .nav-links a:hover {
       color: var(--text);
+      transform: translateY(-1px);
     }
 
     .nav-actions {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
     }
 
     /* Buttons */
     .btn {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 8px;
       font-size: 0.86rem;
       font-weight: 600;
-      padding: 8px 16px;
+      padding: 9px 18px;
       border-radius: var(--radius-sm);
-      transition: all 0.15s ease;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
       cursor: pointer;
       font-family: inherit;
       border: 1px solid transparent;
+      white-space: nowrap;
     }
 
     .btn-primary {
-      background: #f4f4f6;
-      color: #09090c;
+      background: #f4f4f7;
+      color: #09090d;
+      box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
     }
 
     .btn-primary:hover {
       background: #ffffff;
-      transform: translateY(-1px);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(255, 255, 255, 0.18);
     }
 
     .btn-secondary {
@@ -201,18 +279,31 @@
     .btn-secondary:hover {
       background: var(--card-bg);
       border-color: var(--border-focus);
+      transform: translateY(-1px);
+    }
+
+    .btn-accent {
+      background: var(--accent);
+      color: #ffffff;
+      box-shadow: 0 2px 10px rgba(37, 99, 235, 0.3);
+    }
+
+    .btn-accent:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(37, 99, 235, 0.45);
     }
 
     /* HERO SECTION */
     .hero-section {
-      padding: 70px 0 40px;
+      padding: 64px 0 36px;
     }
 
     .hero-grid {
       display: grid;
       grid-template-columns: 1fr 240px;
       align-items: start;
-      gap: 48px;
+      gap: 44px;
       margin-bottom: 32px;
     }
 
@@ -221,39 +312,46 @@
       align-items: center;
       gap: 8px;
       background: var(--success-soft);
-      border: 1px solid rgba(16, 185, 129, 0.25);
+      border: 1px solid var(--success-border);
       color: var(--success-text);
-      padding: 4px 12px;
+      padding: 5px 14px;
       border-radius: 999px;
       font-size: 0.78rem;
-      font-weight: 500;
-      margin-bottom: 20px;
+      font-weight: 600;
+      margin-bottom: 18px;
       font-family: var(--font-mono);
+      letter-spacing: -0.01em;
+      box-shadow: 0 2px 10px rgba(16, 185, 129, 0.1);
     }
 
     .status-dot {
-      width: 7px;
-      height: 7px;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
       background: var(--success);
-      box-shadow: 0 0 6px rgba(16, 185, 129, 0.6);
+      box-shadow: 0 0 8px rgba(16, 185, 129, 0.8);
+      animation: pulseGreen 2s infinite;
+    }
+
+    @keyframes pulseGreen {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.85); }
     }
 
     .hero-name {
-      font-size: 2.5rem;
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      line-height: 1.2;
+      font-size: 2.65rem;
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      line-height: 1.18;
       margin-bottom: 10px;
       color: var(--text);
     }
 
     .hero-title {
-      font-size: 1.12rem;
-      font-weight: 500;
+      font-size: 1.15rem;
+      font-weight: 600;
       color: var(--text-muted);
-      margin-bottom: 20px;
-      font-family: var(--font-mono);
+      margin-bottom: 18px;
       display: flex;
       align-items: center;
       gap: 8px;
@@ -262,7 +360,7 @@
 
     .typewriter-text {
       color: var(--accent-text);
-      font-weight: 600;
+      font-weight: 700;
     }
 
     .typewriter-cursor {
@@ -280,13 +378,18 @@
     .hero-bio {
       color: var(--text-muted);
       font-size: 0.98rem;
-      line-height: 1.7;
+      line-height: 1.72;
       margin-bottom: 24px;
-      max-width: 620px;
+      max-width: 630px;
     }
 
     .hero-bio p {
       margin-bottom: 12px;
+    }
+
+    .hero-bio strong {
+      color: var(--text);
+      font-weight: 600;
     }
 
     .hero-actions {
@@ -297,8 +400,8 @@
     }
 
     .social-btn {
-      width: 38px;
-      height: 38px;
+      width: 40px;
+      height: 40px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -306,14 +409,16 @@
       background: var(--bg-subtle);
       border: 1px solid var(--border);
       color: var(--text-muted);
-      transition: all 0.15s ease;
+      transition: all 0.2s ease;
+      font-size: 1.05rem;
     }
 
     .social-btn:hover {
       color: var(--text);
       border-color: var(--border-focus);
       background: var(--card-bg);
-      transform: translateY(-1px);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
     }
 
     /* Hero Avatar Frame */
@@ -324,6 +429,7 @@
       padding: 10px;
       text-align: center;
       position: relative;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
     }
 
     .hero-avatar-card img {
@@ -333,11 +439,16 @@
       border-radius: calc(var(--radius) - 4px);
       display: block;
       margin-bottom: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .hero-avatar-card:hover img {
+      transform: scale(1.02);
     }
 
     .avatar-meta {
-      font-size: 0.85rem;
-      font-weight: 600;
+      font-size: 0.88rem;
+      font-weight: 700;
       color: var(--text);
     }
 
@@ -348,25 +459,116 @@
     }
 
     /* ==========================================================================
+       VALUE PROPOSITION / NILAI UNGGUL UNTUK PERUSAHAAN
+       ========================================================================== */
+    .value-prop-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-bottom: 36px;
+    }
+
+    .value-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 18px 16px;
+      transition: all 0.22s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .value-card:hover {
+      border-color: var(--border-focus);
+      transform: translateY(-3px);
+      background: var(--card-hover);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .value-card-icon {
+      font-size: 1.25rem;
+      color: var(--accent-text);
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+
+    .value-card-title {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .value-card-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* QUICK METRIC COUNTERS */
+    .quick-info-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      padding: 22px 26px;
+      background: linear-gradient(145deg, rgba(17, 17, 23, 0.95), rgba(20, 20, 28, 0.95));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 50px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .info-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .info-label {
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-subtle);
+      font-family: var(--font-mono);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .info-value {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: var(--text);
+      font-family: var(--font-sans);
+      letter-spacing: -0.02em;
+    }
+
+    .info-subtext {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      line-height: 1.35;
+    }
+
+    /* ==========================================================================
        TERMINAL DEVELOPER INTERAKTIF
        ========================================================================== */
     .dev-terminal {
-      background: #0d0d12;
+      background: #0c0c11;
       border: 1px solid var(--border);
       border-radius: var(--radius);
       overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
       margin-bottom: 48px;
-      transition: border-color 0.2s ease;
+      transition: border-color 0.25s ease;
     }
 
     .dev-terminal:hover {
-      border-color: rgba(96, 165, 250, 0.3);
+      border-color: rgba(96, 165, 250, 0.35);
     }
 
     .terminal-header {
-      background: #13131a;
-      padding: 10px 16px;
+      background: #121219;
+      padding: 10px 18px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -376,7 +578,7 @@
     .terminal-dots {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 7px;
     }
 
     .term-dot {
@@ -391,7 +593,7 @@
 
     .terminal-title {
       font-family: var(--font-mono);
-      font-size: 0.76rem;
+      font-size: 0.78rem;
       color: var(--text-subtle);
     }
 
@@ -404,7 +606,7 @@
       background: transparent;
       border: 1px solid var(--border);
       color: var(--text-muted);
-      padding: 3px 10px;
+      padding: 4px 10px;
       border-radius: 4px;
       font-size: 0.72rem;
       font-family: var(--font-mono);
@@ -419,18 +621,18 @@
     }
 
     .terminal-body {
-      padding: 16px 20px;
+      padding: 18px 22px;
       font-family: var(--font-mono);
-      font-size: 0.82rem;
-      line-height: 1.6;
-      min-height: 130px;
+      font-size: 0.83rem;
+      line-height: 1.65;
+      min-height: 135px;
     }
 
     .term-line {
       display: flex;
       align-items: center;
       gap: 8px;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
 
     .term-prompt {
@@ -443,68 +645,49 @@
     }
 
     .term-command {
-      color: #f4f4f6;
+      color: #f4f4f7;
     }
 
     .term-output {
       color: var(--text-muted);
-      margin-bottom: 12px;
+      margin-bottom: 6px;
       padding-left: 4px;
-    }
-
-    /* QUICK INFO STRIP */
-    .quick-info-strip {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-      padding: 20px 24px;
-      background: var(--bg-subtle);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      margin-bottom: 56px;
-    }
-
-    .info-item {
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-    }
-
-    .info-label {
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--text-subtle);
-      font-family: var(--font-mono);
-    }
-
-    .info-value {
-      font-size: 0.92rem;
-      font-weight: 600;
-      color: var(--text);
     }
 
     /* SECTIONS */
     section {
-      padding: 44px 0;
+      padding: 46px 0;
       border-top: 1px solid var(--border-subtle);
     }
 
     .section-head {
-      margin-bottom: 26px;
+      margin-bottom: 28px;
+    }
+
+    .section-tag {
+      font-size: 0.74rem;
+      font-family: var(--font-mono);
+      color: var(--accent-text);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 4px;
+      display: inline-block;
+      font-weight: 600;
     }
 
     .section-title {
-      font-size: 1.35rem;
+      font-size: 1.42rem;
       font-weight: 700;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.025em;
       margin-bottom: 6px;
       color: var(--text);
     }
 
     .section-desc {
       color: var(--text-muted);
-      font-size: 0.9rem;
+      font-size: 0.92rem;
+      max-width: 680px;
+      line-height: 1.65;
     }
 
     /* ==========================================================================
@@ -515,7 +698,7 @@
       background: var(--card-bg);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      transition: border-color 0.2s ease, background-color 0.2s ease;
+      transition: border-color 0.25s ease, background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
       overflow: hidden;
     }
 
@@ -524,7 +707,7 @@
       position: absolute;
       inset: 0;
       border-radius: inherit;
-      background: radial-gradient(350px circle at var(--mouse-x, -500px) var(--mouse-y, -500px), rgba(96, 165, 250, 0.08), transparent 40%);
+      background: radial-gradient(400px circle at var(--mouse-x, -500px) var(--mouse-y, -500px), rgba(96, 165, 250, 0.09), transparent 45%);
       pointer-events: none;
       opacity: 0;
       transition: opacity 0.3s ease;
@@ -536,8 +719,45 @@
     }
 
     .spotlight-card:hover {
-      border-color: rgba(96, 165, 250, 0.35);
+      border-color: rgba(96, 165, 250, 0.4);
       background-color: var(--card-hover);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+    }
+
+    /* PROJECT FILTER CONTROLS */
+    .filter-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+
+    .filter-btn:hover {
+      color: var(--text);
+      border-color: var(--border-focus);
+      background: var(--card-bg);
+    }
+
+    .filter-btn.active {
+      background: var(--accent);
+      color: #ffffff;
+      border-color: var(--accent);
+      box-shadow: 0 2px 10px rgba(37, 99, 235, 0.35);
     }
 
     /* PROJECT GRID */
@@ -548,10 +768,15 @@
     }
 
     .project-card {
-      padding: 22px;
+      padding: 24px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .project-card.hidden {
+      display: none;
     }
 
     .project-top {
@@ -564,7 +789,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     .project-category {
@@ -580,20 +805,20 @@
       font-size: 0.7rem;
       background: var(--success-soft);
       color: var(--success-text);
-      border: 1px solid rgba(16, 185, 129, 0.25);
-      padding: 2px 8px;
+      border: 1px solid var(--success-border);
+      padding: 3px 9px;
       border-radius: 999px;
       font-weight: 600;
       display: inline-flex;
       align-items: center;
-      gap: 4px;
+      gap: 5px;
       font-family: var(--font-mono);
     }
 
     .project-name {
-      font-size: 1.12rem;
+      font-size: 1.15rem;
       font-weight: 700;
-      letter-spacing: -0.01em;
+      letter-spacing: -0.015em;
       margin-bottom: 8px;
       color: var(--text);
     }
@@ -601,8 +826,20 @@
     .project-summary {
       font-size: 0.88rem;
       color: var(--text-muted);
-      line-height: 1.6;
+      line-height: 1.62;
+      margin-bottom: 12px;
+    }
+
+    /* Value pill highlight inside project card */
+    .project-impact {
+      background: rgba(37, 99, 235, 0.08);
+      border-left: 3px solid var(--accent);
+      padding: 6px 10px;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-size: 0.8rem;
+      color: #bfdbfe;
       margin-bottom: 14px;
+      line-height: 1.45;
     }
 
     .project-tags {
@@ -619,12 +856,18 @@
       background: var(--bg-subtle);
       border: 1px solid var(--border-subtle);
       color: var(--text-muted);
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+
+    .project-card:hover .tag {
+      color: var(--text);
+      border-color: rgba(96, 165, 250, 0.25);
     }
 
     .project-links {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
       padding-top: 14px;
       border-top: 1px solid var(--border-subtle);
       position: relative;
@@ -638,11 +881,12 @@
       align-items: center;
       gap: 6px;
       color: var(--text-muted);
-      transition: color 0.15s ease;
+      transition: color 0.15s ease, transform 0.15s ease;
     }
 
     .proj-link:hover {
       color: var(--text);
+      transform: translateY(-1px);
     }
 
     .proj-link.live {
@@ -655,7 +899,7 @@
 
     /* SKRIPSI / STUDI KASUS */
     .thesis-card {
-      padding: 28px;
+      padding: 30px;
     }
 
     .thesis-content {
@@ -673,14 +917,15 @@
       font-family: var(--font-mono);
       margin-bottom: 12px;
       background: var(--accent-soft);
-      padding: 4px 10px;
+      padding: 4px 12px;
       border-radius: var(--radius-sm);
+      border: 1px solid var(--accent-border);
     }
 
     .thesis-title {
-      font-size: 1.25rem;
+      font-size: 1.28rem;
       font-weight: 700;
-      line-height: 1.4;
+      line-height: 1.42;
       margin-bottom: 10px;
       color: var(--text);
     }
@@ -689,6 +934,7 @@
       font-size: 0.88rem;
       color: var(--text-muted);
       margin-bottom: 14px;
+      line-height: 1.6;
     }
 
     .thesis-meta span {
@@ -699,12 +945,34 @@
     .thesis-abstract {
       font-size: 0.9rem;
       color: var(--text-muted);
-      line-height: 1.65;
+      line-height: 1.68;
       background: var(--bg-subtle);
-      padding: 16px;
+      padding: 16px 18px;
       border-radius: var(--radius-sm);
       border-left: 3px solid var(--accent);
       margin-bottom: 16px;
+    }
+
+    .thesis-highlights {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .thesis-point {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border-subtle);
+      padding: 10px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 0.84rem;
+      color: var(--text-muted);
+    }
+
+    .thesis-point strong {
+      color: var(--text);
+      display: block;
+      margin-bottom: 2px;
     }
 
     .thesis-tags {
@@ -724,7 +992,7 @@
       display: grid;
       grid-template-columns: 140px 1fr;
       gap: 24px;
-      padding: 18px 20px;
+      padding: 20px 22px;
     }
 
     .timeline-inner {
@@ -733,22 +1001,23 @@
     }
 
     .timeline-date {
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       font-family: var(--font-mono);
-      color: var(--text-subtle);
+      color: var(--accent-text);
+      font-weight: 600;
       padding-top: 2px;
     }
 
     .timeline-content h4 {
-      font-size: 0.98rem;
+      font-size: 1.02rem;
       font-weight: 700;
       color: var(--text);
       margin-bottom: 4px;
     }
 
     .timeline-org {
-      font-size: 0.86rem;
-      color: var(--accent-text);
+      font-size: 0.88rem;
+      color: var(--text-muted);
       font-weight: 500;
       margin-bottom: 8px;
     }
@@ -756,7 +1025,7 @@
     .timeline-desc {
       font-size: 0.88rem;
       color: var(--text-muted);
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     .timeline-desc ul {
@@ -776,7 +1045,7 @@
     }
 
     .skill-box {
-      padding: 20px;
+      padding: 22px;
     }
 
     .skill-inner {
@@ -785,7 +1054,7 @@
     }
 
     .skill-box h4 {
-      font-size: 0.95rem;
+      font-size: 0.96rem;
       font-weight: 700;
       margin-bottom: 12px;
       display: flex;
@@ -804,96 +1073,6 @@
       gap: 6px;
     }
 
-    /* KONTAK */
-    .contact-card {
-      background: var(--bg-subtle);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 36px 30px;
-      text-align: center;
-    }
-
-    .contact-card h3 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-
-    .contact-card p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      max-width: 520px;
-      margin: 0 auto 24px;
-    }
-
-    .contact-buttons-wrap {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    /* FOOTER */
-    footer.site-footer {
-      padding: 40px 0;
-      border-top: 1px solid var(--border-subtle);
-      margin-top: 60px;
-      font-size: 0.82rem;
-      color: var(--text-subtle);
-      position: relative;
-      z-index: 1;
-    }
-
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-
-    /* TOAST */
-    .toast {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      background: #18181b;
-      border: 1px solid var(--border-focus);
-      color: var(--text);
-      padding: 10px 18px;
-      border-radius: var(--radius-sm);
-      font-size: 0.85rem;
-      font-weight: 500;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      opacity: 0;
-      transform: translateY(10px);
-      pointer-events: none;
-      transition: all 0.2s ease;
-      z-index: 999;
-    }
-
-    .toast.show {
-      opacity: 1;
-      transform: translateY(0);
-      pointer-events: auto;
-    }
-
-    /* SCROLL REVEAL ANIMATION */
-    .reveal {
-      opacity: 0;
-      transform: translateY(16px);
-      transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
     /* VISI & MISI */
     .vision-grid {
       display: grid;
@@ -902,7 +1081,7 @@
     }
 
     .vision-card {
-      padding: 24px;
+      padding: 26px;
       border-radius: var(--radius);
       display: flex;
       flex-direction: column;
@@ -918,16 +1097,16 @@
     }
 
     .vision-icon {
-      width: 40px;
-      height: 40px;
+      width: 42px;
+      height: 42px;
       border-radius: var(--radius-sm);
       background: var(--accent-soft);
-      border: 1px solid rgba(37, 99, 235, 0.2);
+      border: 1px solid var(--accent-border);
       color: var(--accent-text);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.15rem;
+      font-size: 1.2rem;
     }
 
     .vision-tag {
@@ -936,10 +1115,11 @@
       color: var(--accent-text);
       text-transform: uppercase;
       letter-spacing: 0.05em;
+      font-weight: 600;
     }
 
     .vision-title {
-      font-size: 1.22rem;
+      font-size: 1.25rem;
       font-weight: 700;
       color: var(--text);
       margin-bottom: 10px;
@@ -948,15 +1128,24 @@
     }
 
     .vision-body {
-      font-size: 0.94rem;
-      color: #cbd5e1;
-      line-height: 1.65;
+      font-size: 0.95rem;
+      color: #e2e8f0;
+      line-height: 1.68;
       position: relative;
       z-index: 2;
       background: var(--bg-subtle);
-      padding: 16px;
+      padding: 16px 18px;
       border-radius: var(--radius-sm);
       border-left: 3px solid var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .vision-commitment {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      position: relative;
+      z-index: 2;
+      line-height: 1.55;
     }
 
     /* CERTIFICATIONS */
@@ -967,23 +1156,23 @@
     }
 
     .cert-card {
-      padding: 22px;
+      padding: 24px;
       display: flex;
       align-items: flex-start;
       gap: 16px;
     }
 
     .cert-icon {
-      width: 44px;
-      height: 44px;
+      width: 46px;
+      height: 46px;
       border-radius: var(--radius-sm);
       background: var(--accent-soft);
-      border: 1px solid rgba(37, 99, 235, 0.2);
+      border: 1px solid var(--accent-border);
       color: var(--accent-text);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.25rem;
+      font-size: 1.3rem;
       flex-shrink: 0;
       position: relative;
       z-index: 2;
@@ -1007,22 +1196,22 @@
       font-family: var(--font-mono);
       color: var(--success-text);
       background: var(--success-soft);
-      border: 1px solid rgba(16, 185, 129, 0.25);
+      border: 1px solid var(--success-border);
       padding: 2px 8px;
       border-radius: 4px;
       margin-bottom: 8px;
-      font-weight: 500;
+      font-weight: 600;
     }
 
     .cert-info p {
-      font-size: 0.86rem;
+      font-size: 0.88rem;
       color: var(--text-muted);
-      line-height: 1.55;
+      line-height: 1.58;
     }
 
     /* APLIKASI & SOFTWARE YANG DIKUASAI */
     .tools-section {
-      margin-top: 28px;
+      margin-top: 32px;
       padding-top: 28px;
       border-top: 1px solid var(--border-subtle);
     }
@@ -1057,26 +1246,32 @@
       align-items: center;
       text-align: center;
       gap: 8px;
-      transition: all 0.2s ease;
+      transition: all 0.22s ease;
       position: relative;
     }
 
     .tool-card:hover {
       border-color: var(--border-focus);
       background: var(--card-hover);
-      transform: translateY(-2px);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
     }
 
     .tool-icon {
-      font-size: 1.7rem;
+      font-size: 1.75rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 38px;
+      height: 40px;
+      transition: transform 0.2s ease;
+    }
+
+    .tool-card:hover .tool-icon {
+      transform: scale(1.1);
     }
 
     .tool-name {
-      font-size: 0.82rem;
+      font-size: 0.83rem;
       font-weight: 600;
       color: var(--text);
     }
@@ -1087,14 +1282,153 @@
       font-family: var(--font-mono);
     }
 
+    /* KONTAK */
+    .contact-card {
+      background: linear-gradient(145deg, rgba(17, 17, 24, 0.95), rgba(20, 20, 30, 0.95));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 42px 32px;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
+    }
+
+    .contact-card h3 {
+      font-size: 1.6rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+    }
+
+    .contact-card p {
+      color: var(--text-muted);
+      font-size: 0.96rem;
+      max-width: 560px;
+      margin: 0 auto 26px;
+      line-height: 1.65;
+    }
+
+    .contact-buttons-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    /* FOOTER */
+    footer.site-footer {
+      padding: 38px 0;
+      border-top: 1px solid var(--border-subtle);
+      margin-top: 60px;
+      font-size: 0.83rem;
+      color: var(--text-subtle);
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    /* BACK TO TOP FLOATING BUTTON */
+    .back-to-top {
+      position: fixed;
+      bottom: 26px;
+      right: 26px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      opacity: 0;
+      transform: translateY(16px);
+      pointer-events: none;
+      z-index: 90;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    .back-to-top:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #ffffff;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(37, 99, 235, 0.4);
+    }
+
+    /* TOAST */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: #181822;
+      border: 1px solid var(--border-focus);
+      color: var(--text);
+      padding: 11px 20px;
+      border-radius: 999px;
+      font-size: 0.86rem;
+      font-weight: 600;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.6);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 999;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+      pointer-events: auto;
+    }
+
+    /* SCROLL REVEAL ANIMATION */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* STAGGER REVEAL DELAYS */
+    .delay-1 { transition-delay: 0.08s; }
+    .delay-2 { transition-delay: 0.16s; }
+    .delay-3 { transition-delay: 0.24s; }
+
     /* RESPONSIVE */
-    @media (max-width: 768px) {
+    @media (max-width: 860px) {
       .hero-grid {
         grid-template-columns: 1fr;
-        gap: 32px;
+        gap: 28px;
       }
       .hero-avatar-card {
         max-width: 200px;
+      }
+      .value-prop-strip {
+        grid-template-columns: 1fr 1fr;
       }
       .quick-info-strip {
         grid-template-columns: 1fr 1fr;
@@ -1108,9 +1442,12 @@
       .vision-grid {
         grid-template-columns: 1fr;
       }
+      .thesis-highlights {
+        grid-template-columns: 1fr;
+      }
       .timeline-row {
         grid-template-columns: 1fr;
-        gap: 8px;
+        gap: 6px;
       }
       .skills-block {
         grid-template-columns: 1fr;
@@ -1121,36 +1458,42 @@
       .nav-links {
         display: none;
       }
-      .dev-terminal {
-        display: none;
-      }
     }
   </style>
 </head>
 <body>
 
-  <!-- NAVIGASI -->
-  <header class="site-header">
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress-bar" id="scrollProgress"></div>
+
+  <!-- Ambient Glow Effects -->
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
+
+  <!-- NAVIGASI UTAMA -->
+  <header class="site-header" id="siteHeader">
     <div class="container nav-inner">
       <a href="#" class="brand">
         <img src="assets/adli.jpeg" alt="Adli Zain Pribadi" onerror="this.src='https://avatars.githubusercontent.com/u/187979644?v=4'">
-        <span>Adli Zain Pribadi</span>
+        <div>
+          <span>Adli Zain Pribadi</span>
+          <span class="brand-role">Software Engineer &bull; S.Kom.</span>
+        </div>
       </a>
 
       <ul class="nav-links">
+        <li><a href="#value-prop">Nilai Unggul</a></li>
         <li><a href="#vision">Visi &amp; Misi</a></li>
-        <li><a href="#projects">Proyek</a></li>
-        <li><a href="#thesis">Skripsi</a></li>
+        <li><a href="#projects">Portofolio</a></li>
+        <li><a href="#thesis">Skripsi &amp; Riset</a></li>
         <li><a href="#experience">Pengalaman</a></li>
-        <li><a href="#education">Pendidikan</a></li>
         <li><a href="#skills">Keahlian</a></li>
         <li><a href="#certifications">Sertifikasi</a></li>
-        <li><a href="#contact">Kontak</a></li>
       </ul>
 
       <div class="nav-actions">
-        <a href="mailto:adlizainpribadi65@gmail.com" class="btn btn-primary">
-          <i class="fa-regular fa-envelope"></i> Hubungi Saya
+        <a href="mailto:adlizainpribadi65@gmail.com" class="btn btn-accent">
+          <i class="fa-solid fa-paper-plane"></i> Rekrut / Hubungi
         </a>
       </div>
     </div>
@@ -1164,10 +1507,10 @@
         <div>
           <div class="status-badge">
             <span class="status-dot"></span>
-            <span>● git:(main) • Siap Menerima Kerja &amp; Kolaborasi</span>
+            <span>Terbuka untuk Peluang Kerja (Full-Time, Kontrak, Onsite &amp; Hybrid)</span>
           </div>
 
-          <h1 class="hero-name">Adli Zain Pribadi</h1>
+          <h1 class="hero-name">Adli Zain Pribadi, S.Kom.</h1>
           <div class="hero-title">
             <span>Software Engineer &bull;</span>
             <span class="typewriter-text" id="typewriter"></span><span class="typewriter-cursor">_</span>
@@ -1175,24 +1518,24 @@
 
           <div class="hero-bio">
             <p>
-              Halo, saya Adli. Lulusan Sarjana Komputer (S.Kom.) dari Program Studi <strong>Teknik Informatika Universitas Bale Bandung (UNIBBA)</strong>, berdomisili di Bandung, Indonesia.
+              Lulusan <strong>Sarjana Komputer (S.Kom.) Teknik Informatika Universitas Bale Bandung</strong> yang berfokus membangun <strong>aplikasi web operasional, portal manajemen internal, serta otomasi pengolahan data</strong> yang langsung berdampak pada efisiensi kerja tim.
             </p>
             <p>
-              Fokus saya adalah merancang dan mengembangkan aplikasi web, dashboard operasional internal, serta layanan backend. Berpengalaman dalam implementasi Sistem Pendukung Keputusan (SPK), otomasi pelaporan bisnis, dan rekayasa perangkat lunak yang praktis.
+              Berpengalaman memadukan logika rekayasa perangkat lunak dengan metode saintifik seperti <strong>Sistem Pendukung Keputusan (AHP-SAW)</strong>, ekspor data multi-format (Excel/SheetJS), dan integrasi API untuk membantu perusahaan memangkas waktu kerja manual dan meminimalisir risiko kesalahan data.
             </p>
           </div>
 
           <div class="hero-actions">
             <a href="mailto:adlizainpribadi65@gmail.com" class="btn btn-primary">
-              <i class="fa-solid fa-paper-plane"></i> Kirim Email
+              <i class="fa-solid fa-envelope"></i> Kirim Penawaran Kerja
             </a>
             <button class="btn btn-secondary" onclick="copyEmail()">
               <i class="fa-regular fa-copy"></i> Salin Email
             </button>
-            <a href="https://github.com/adlizainpribadi65-alt" target="_blank" rel="noopener noreferrer" class="social-btn" title="GitHub">
+            <a href="https://github.com/adlizainpribadi65-alt" target="_blank" rel="noopener noreferrer" class="social-btn" title="Kunjungi Profil GitHub">
               <i class="fa-brands fa-github"></i>
             </a>
-            <a href="https://linkedin.com/in/adlizain" target="_blank" rel="noopener noreferrer" class="social-btn" title="LinkedIn">
+            <a href="https://linkedin.com/in/adlizain" target="_blank" rel="noopener noreferrer" class="social-btn" title="Kunjungi Profil LinkedIn">
               <i class="fa-brands fa-linkedin-in"></i>
             </a>
           </div>
@@ -1205,6 +1548,54 @@
         </div>
       </div>
 
+      <!-- NILAI UNGGUL UNTUK PERUSAHAAN (VALUE PROPOSITION) -->
+      <div id="value-prop" class="value-prop-strip reveal">
+        <div class="value-card">
+          <div class="value-card-icon"><i class="fa-solid fa-bolt"></i></div>
+          <div class="value-card-title">Solusi Langsung Pakai</div>
+          <div class="value-card-desc">Fokus pada sistem yang menyelesaikan masalah nyata: otomatisasi laporan, absensi digital, dan efisiensi alur kerja tim.</div>
+        </div>
+        <div class="value-card">
+          <div class="value-card-icon"><i class="fa-solid fa-brain"></i></div>
+          <div class="value-card-title">Cepat Beradaptasi</div>
+          <div class="value-card-desc">Terbiasa mempelajari teknologi, standar kode industri, dan alur operasional bisnis baru dalam waktu singkat.</div>
+        </div>
+        <div class="value-card">
+          <div class="value-card-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <div class="value-card-title">Ketelitian Berbasis Data</div>
+          <div class="value-card-desc">Pengalaman riset SPK dan Quality Control (QC) melatih kebiasaan validasi data yang akurat dan minim eror.</div>
+        </div>
+        <div class="value-card">
+          <div class="value-card-icon"><i class="fa-solid fa-handshake"></i></div>
+          <div class="value-card-title">Komitmen &amp; Kerja Tim</div>
+          <div class="value-card-desc">Menjunjung tinggi profesionalisme, kedisiplinan tenggat waktu, serta komunikasi terbuka dalam lingkungan kerja.</div>
+        </div>
+      </div>
+
+      <!-- STRIP RINGKASAN METRIK & PROFIL -->
+      <div class="quick-info-strip reveal">
+        <div class="info-item">
+          <span class="info-label"><i class="fa-solid fa-graduation-cap"></i> Kualifikasi</span>
+          <span class="info-value">S.Kom.</span>
+          <span class="info-subtext">S1 Teknik Informatika UNIBBA</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label"><i class="fa-solid fa-code-branch"></i> Proyek &amp; Kode</span>
+          <span class="info-value"><span class="counter" data-target="15">0</span>+ Repositori</span>
+          <span class="info-subtext">Aplikasi web, SPK, dan perkakas internal</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label"><i class="fa-solid fa-location-dot"></i> Ketersediaan</span>
+          <span class="info-value">Siap Kerja</span>
+          <span class="info-subtext">Bandung, Jabodetabek &amp; Remote</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label"><i class="fa-solid fa-layer-group"></i> Kemahiran Inti</span>
+          <span class="info-value">Full-Stack &amp; Data</span>
+          <span class="info-subtext">JS, PHP, Python, SQL, Ms Excel</span>
+        </div>
+      </div>
+
       <!-- TERMINAL DEVELOPER INTERAKTIF -->
       <div class="dev-terminal reveal">
         <div class="terminal-header">
@@ -1213,57 +1604,38 @@
             <span class="term-dot dot-yellow"></span>
             <span class="term-dot dot-green"></span>
           </div>
-          <div class="terminal-title">zsh — adli@unibba-laptop:~</div>
+          <div class="terminal-title">bash — adli@enterprise-terminal:~</div>
           <div class="terminal-tabs">
-            <button class="term-btn active" id="btn-whoami" onclick="runTermCmd('whoami')">whoami</button>
-            <button class="term-btn" id="btn-vision" onclick="runTermCmd('vision')">visi.md</button>
-            <button class="term-btn" id="btn-stack" onclick="runTermCmd('stack')">stack.json</button>
-            <button class="term-btn" id="btn-git" onclick="runTermCmd('git')">git log</button>
-            <button class="term-btn" id="btn-contact" onclick="runTermCmd('contact')">kontak.sh</button>
+            <button class="term-btn active" id="btn-whoami" onclick="runTermCmd('whoami')">ringkasan.sh</button>
+            <button class="term-btn" id="btn-vision" onclick="runTermCmd('vision')">komitmen.md</button>
+            <button class="term-btn" id="btn-stack" onclick="runTermCmd('stack')">keahlian.json</button>
+            <button class="term-btn" id="btn-git" onclick="runTermCmd('git')">riwayat-kerja</button>
+            <button class="term-btn" id="btn-contact" onclick="runTermCmd('contact')">kontak-cepat</button>
           </div>
         </div>
         <div class="terminal-body" id="termOutput">
           <div class="term-line">
             <span class="term-prompt">➜</span> 
-            <span class="term-path">~</span> 
-            <span class="term-command" id="termExecCmd">whoami --verbose</span>
+            <span class="term-path">~/profil</span> 
+            <span class="term-command" id="termExecCmd">./ringkasan.sh --perusahaan</span>
           </div>
           <div class="term-output" id="termExecResult">
-            [nama]: "Adli Zain Pribadi, S.Kom."<br>
-            [pendidikan]: "Sarjana Komputer (Universitas Bale Bandung)"<br>
-            [domisili]: "Bandung, Indonesia"<br>
-            [status]: "Siap untuk posisi Software Engineer &amp; Full-Stack Web Developer"
+            [Kandidat]: "Adli Zain Pribadi, S.Kom."<br>
+            [Pendidikan]: "S1 Teknik Informatika - Universitas Bale Bandung (Lulus 2026)"<br>
+            [Nilai Tambah]: "Mampu membangun aplikasi web operasional & otomasi pelaporan Excel mandiri"<br>
+            [Status Rekrutmen]: "Siap bergabung segera untuk posisi Software Engineer / Web Developer"
           </div>
         </div>
       </div>
 
     </div>
 
-    <!-- STRIP INFORMASI SINGKAT -->
-    <div class="quick-info-strip reveal">
-      <div class="info-item">
-        <span class="info-label">Gelar</span>
-        <span class="info-value">S.Kom. (Informatika)</span>
-      </div>
-      <div class="info-item">
-        <span class="info-label">Almamater</span>
-        <span class="info-value">Universitas Bale Bandung</span>
-      </div>
-      <div class="info-item">
-        <span class="info-label">Lokasi</span>
-        <span class="info-value">Bandung, Indonesia</span>
-      </div>
-      <div class="info-item">
-        <span class="info-label">Tech Stack Utama</span>
-        <span class="info-value">JavaScript, PHP, Python</span>
-      </div>
-    </div>
-
     <!-- VISI & MISI PROFESIONAL -->
     <section id="vision" class="reveal">
       <div class="section-head">
-        <h2 class="section-title">Visi &amp; Misi</h2>
-        <p class="section-desc">Prinsip kerja, komitmen profesionalisme, dan orientasi kontribusi bagi perusahaan.</p>
+        <span class="section-tag">Prinsip Kerja &amp; Kontribusi</span>
+        <h2 class="section-title">Visi &amp; Misi Profesional</h2>
+        <p class="section-desc">Pedoman fundamental dalam bekerja: integritas, pengembangan kapabilitas berkelanjutan, dan dedikasi penuh untuk mencapai target perusahaan.</p>
       </div>
 
       <div class="vision-grid">
@@ -1273,12 +1645,17 @@
             <div class="vision-icon">
               <i class="fa-solid fa-compass"></i>
             </div>
-            <span class="vision-tag">Arah &amp; Tujuan</span>
+            <div>
+              <span class="vision-tag">Arah &amp; Standar Kerja</span>
+              <h3 class="vision-title" style="margin-bottom:0;">Visi Saya</h3>
+            </div>
           </div>
-          <h3 class="vision-title">Visi Saya</h3>
           <div class="vision-body">
             &ldquo;Menjadi pribadi yang profesional dan kompeten, terus belajar, mengembangkan kemampuan, serta memberikan kontribusi positif bagi perusahaan.&rdquo;
           </div>
+          <p class="vision-commitment">
+            <strong>Implementasi bagi Perusahaan:</strong> Selalu proaktif mencari cara kerja yang lebih efisien, tanggap terhadap arahan manajemen, dan mengutamakan kualitas dalam setiap kode maupun tugas yang dipercayakan.
+          </p>
         </div>
 
         <!-- Misi Card -->
@@ -1287,12 +1664,17 @@
             <div class="vision-icon">
               <i class="fa-solid fa-bullseye"></i>
             </div>
-            <span class="vision-tag">Komitmen &amp; Tindakan</span>
+            <div>
+              <span class="vision-tag">Langkah &amp; Tanggung Jawab</span>
+              <h3 class="vision-title" style="margin-bottom:0;">Misi Saya</h3>
+            </div>
           </div>
-          <h3 class="vision-title">Misi Saya</h3>
           <div class="vision-body">
             &ldquo;Meningkatkan kompetensi, menjaga profesionalisme, membangun kerja sama, serta memberikan kontribusi terbaik bagi perusahaan.&rdquo;
           </div>
+          <p class="vision-commitment">
+            <strong>Implementasi bagi Perusahaan:</strong> Membina komunikasi yang sehat dengan rekan kerja, disiplin memenuhi tenggat waktu proyek, dan senantiasa menjaga kerahasiaan serta etika bisnis perusahaan.
+          </p>
         </div>
       </div>
     </section>
@@ -1300,169 +1682,196 @@
     <!-- PROYEK PILIHAN -->
     <section id="projects" class="reveal">
       <div class="section-head">
-        <h2 class="section-title">Proyek Pilihan</h2>
-        <p class="section-desc">Aplikasi web, sistem operasional, dan perkakas developer yang telah di-deploy dan dapat diakses publik.</p>
+        <span class="section-tag">Studi Kasus &amp; Portofolio Nyata</span>
+        <h2 class="section-title">Proyek &amp; Solusi yang Telah Diterapkan</h2>
+        <p class="section-desc">Daftar sistem yang telah di-deploy dan dapat diakses langsung. Dirancang untuk menjawab kebutuhan operasional bisnis secara nyata.</p>
       </div>
 
-      <div class="projects-grid">
+      <!-- Filter Kategori Proyek -->
+      <div class="filter-wrapper">
+        <button class="filter-btn active" onclick="filterProjects('all')">Semua Proyek (6)</button>
+        <button class="filter-btn" onclick="filterProjects('web')">Aplikasi Web &amp; Operasional</button>
+        <button class="filter-btn" onclick="filterProjects('spk')">Sistem Keputusan (SPK)</button>
+        <button class="filter-btn" onclick="filterProjects('data')">Otomasi &amp; Analisis Data</button>
+      </div>
+
+      <div class="projects-grid" id="projectsContainer">
         
         <!-- Proyek 1: Admin MBG -->
-        <div class="project-card spotlight-card">
+        <div class="project-card spotlight-card" data-category="web data">
           <div class="project-top">
             <div class="project-header-row">
-              <span class="project-category">Aplikasi Web</span>
+              <span class="project-category">Aplikasi Operasional &amp; SDM</span>
               <span class="project-badge-live"><i class="fa-solid fa-circle" style="font-size: 6px;"></i> Live Demo</span>
             </div>
             <h3 class="project-name">Admin MBG (Makan Bergizi Gratis)</h3>
             <p class="project-summary">
-              Dashboard operasional dan manajemen tenaga kerja katering. Dilengkapi absensi bulanan, penjadwalan shift fleksibel, generator surat perjanjian kerja, dan ekspor laporan Excel (.xlsx) otomatis via SheetJS.
+              Portal administrasi operasional katering berskala besar. Mengelola absensi harian tenaga kerja, penjadwalan rotasi shift, dan generator surat perjanjian kerja otomatis.
             </p>
+            <div class="project-impact">
+              <i class="fa-solid fa-circle-check"></i> <strong>Dampak Bisnis:</strong> Memangkas waktu rekap data hingga 90% dengan 10 modul ekspor format Excel (.xlsx) otomatis via SheetJS.
+            </div>
             <div class="project-tags">
               <span class="tag">JavaScript</span>
-              <span class="tag">SheetJS</span>
+              <span class="tag">SheetJS (Excel Engine)</span>
               <span class="tag">Chart.js</span>
-              <span class="tag">HTML/CSS</span>
-              <span class="tag">Operasional</span>
+              <span class="tag">Operasional HR</span>
             </div>
           </div>
           <div class="project-links">
             <a href="https://adlizainpribadi65-alt.github.io/Aplikasi-Admin-MBG/" target="_blank" rel="noopener noreferrer" class="proj-link live">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Coba Demo Langsung
             </a>
             <a href="https://github.com/adlizainpribadi65-alt/Aplikasi-Admin-MBG" target="_blank" rel="noopener noreferrer" class="proj-link">
-              <i class="fa-brands fa-github"></i> Repository
+              <i class="fa-brands fa-github"></i> Source Code
             </a>
           </div>
         </div>
 
         <!-- Proyek 2: Sistem Absensi Pegawai v2 -->
-        <div class="project-card spotlight-card">
+        <div class="project-card spotlight-card" data-category="web">
           <div class="project-top">
             <div class="project-header-row">
-              <span class="project-category">Portal SDM</span>
+              <span class="project-category">Sistem Presensi Internal</span>
               <span class="project-badge-live"><i class="fa-solid fa-circle" style="font-size: 6px;"></i> Live Demo</span>
             </div>
             <h3 class="project-name">Sistem Absensi Pegawai v2</h3>
             <p class="project-summary">
-              Portal pencatatan presensi kerja ringan dengan filter status kehadiran instan, pencarian data dinamis di sisi klien, dan rekap log audit siap ekspor.
+              Aplikasi presensi kehadiran pegawai berbasis web yang ringan dan responsif. Mendukung pencarian data instan di sisi klien, filter status kehadiran per divisi, dan rekap log audit otomatis.
             </p>
+            <div class="project-impact">
+              <i class="fa-solid fa-circle-check"></i> <strong>Dampak Bisnis:</strong> Menghilangkan proses pencatatan kehadiran manual di kertas, mempermudah tim HR memantau kedisiplinan secara real-time.
+            </div>
             <div class="project-tags">
               <span class="tag">JavaScript</span>
               <span class="tag">Bootstrap</span>
               <span class="tag">Data Tables</span>
-              <span class="tag">Internal Tool</span>
+              <span class="tag">Internal HR Tool</span>
             </div>
           </div>
           <div class="project-links">
             <a href="https://adlizainpribadi65-alt.github.io/sistem-absensi-v2/" target="_blank" rel="noopener noreferrer" class="proj-link live">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Coba Demo Langsung
             </a>
             <a href="https://github.com/adlizainpribadi65-alt/sistem-absensi-v2" target="_blank" rel="noopener noreferrer" class="proj-link">
-              <i class="fa-brands fa-github"></i> Repository
+              <i class="fa-brands fa-github"></i> Source Code
             </a>
           </div>
         </div>
 
-        <!-- Proyek 3: Antigravity UI Playground -->
-        <div class="project-card spotlight-card">
+        <!-- Proyek 3: SPK Penilaian Kinerja Karyawan -->
+        <div class="project-card spotlight-card" data-category="spk data">
           <div class="project-top">
             <div class="project-header-row">
-              <span class="project-category">Laboratorium Frontend</span>
-              <span class="project-badge-live"><i class="fa-solid fa-circle" style="font-size: 6px;"></i> Live Demo</span>
+              <span class="project-category">Sistem Pendukung Keputusan (Riset)</span>
+              <span class="project-badge-live" style="background: rgba(37,99,235,0.12); color:#60a5fa; border-color: rgba(37,99,235,0.3);">Studi Kasus Nyata</span>
             </div>
-            <h3 class="project-name">Antigravity UI Playground</h3>
+            <h3 class="project-name">SPK Karyawan Berbasis AHP &amp; SAW</h3>
             <p class="project-summary">
-              Koleksi komponen antarmuka interaktif untuk eksplorasi pola layout CSS modern, mikro-interaksi, grid responsif, dan elemen sistem desain.
+              Sistem penilaian kinerja pegawai terintegrasi SOP kedisiplinan yang diimplementasikan pada Reegiolla The Shoes. Memadukan metode AHP untuk pembobotan kriteria dan SAW untuk perangkingan objektif.
             </p>
-            <div class="project-tags">
-              <span class="tag">HTML5</span>
-              <span class="tag">CSS3</span>
-              <span class="tag">JavaScript</span>
-              <span class="tag">UI/UX</span>
+            <div class="project-impact">
+              <i class="fa-solid fa-circle-check"></i> <strong>Dampak Bisnis:</strong> Mengganti evaluasi berbasis firasat subjektif menjadi sistem penilaian adil, terukur, dan transparan bagi manajemen.
             </div>
-          </div>
-          <div class="project-links">
-            <a href="https://adlizainpribadi65-alt.github.io/antigravity-ui-playground/" target="_blank" rel="noopener noreferrer" class="proj-link live">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
-            </a>
-            <a href="https://github.com/adlizainpribadi65-alt/antigravity-ui-playground" target="_blank" rel="noopener noreferrer" class="proj-link">
-              <i class="fa-brands fa-github"></i> Repository
-            </a>
-          </div>
-        </div>
-
-        <!-- Proyek 4: SPK Penilaian Kinerja Karyawan -->
-        <div class="project-card spotlight-card">
-          <div class="project-top">
-            <div class="project-header-row">
-              <span class="project-category">Sistem Pendukung Keputusan</span>
-            </div>
-            <h3 class="project-name">SPK Karyawan (AHP &amp; SAW)</h3>
-            <p class="project-summary">
-              Sistem Pendukung Keputusan penilaian kinerja karyawan di Reegiolla The Shoes (proyek Skripsi). Memadukan metode AHP untuk pembobotan kriteria dan SAW untuk perangkingan objektif berdasarkan SOP.
-            </p>
             <div class="project-tags">
               <span class="tag">PHP</span>
               <span class="tag">MySQL</span>
-              <span class="tag">Metode AHP</span>
-              <span class="tag">Metode SAW</span>
-              <span class="tag">Studi Kasus</span>
+              <span class="tag">Algoritma AHP</span>
+              <span class="tag">Algoritma SAW</span>
+              <span class="tag">Audit Kinerja</span>
             </div>
           </div>
           <div class="project-links">
             <a href="https://github.com/adlizainpribadi65-alt/spk-karyawan-saw" target="_blank" rel="noopener noreferrer" class="proj-link">
-              <i class="fa-brands fa-github"></i> Repository
+              <i class="fa-brands fa-github"></i> Repository GitHub
             </a>
             <a href="#thesis" class="proj-link">
-              <i class="fa-solid fa-book-open"></i> Baca Riset
+              <i class="fa-solid fa-book-open"></i> Baca Abstrak Skripsi
+            </a>
+          </div>
+        </div>
+
+        <!-- Proyek 4: Antigravity UI Playground -->
+        <div class="project-card spotlight-card" data-category="web">
+          <div class="project-top">
+            <div class="project-header-row">
+              <span class="project-category">Frontend &amp; Interaktivitas UI</span>
+              <span class="project-badge-live"><i class="fa-solid fa-circle" style="font-size: 6px;"></i> Live Demo</span>
+            </div>
+            <h3 class="project-name">Antigravity UI Design Lab</h3>
+            <p class="project-summary">
+              Laboratorium antarmuka web interaktif yang mendemonstrasikan kemampuan merancang tata letak responsif, mikro-animasi berperforma tinggi, dan komponen UI modern tanpa ketergantungan library berat.
+            </p>
+            <div class="project-impact">
+              <i class="fa-solid fa-circle-check"></i> <strong>Dampak Bisnis:</strong> Memastikan aplikasi bisnis yang dibangun tetap nyaman digunakan, cepat diakses di perangkat seluler, dan ramah pengguna.
+            </div>
+            <div class="project-tags">
+              <span class="tag">HTML5 &amp; CSS3 Modern</span>
+              <span class="tag">Vanilla JavaScript</span>
+              <span class="tag">UI/UX Responsif</span>
+              <span class="tag">Mikro-Animasi</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="https://adlizainpribadi65-alt.github.io/antigravity-ui-playground/" target="_blank" rel="noopener noreferrer" class="proj-link live">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Coba Demo Langsung
+            </a>
+            <a href="https://github.com/adlizainpribadi65-alt/antigravity-ui-playground" target="_blank" rel="noopener noreferrer" class="proj-link">
+              <i class="fa-brands fa-github"></i> Source Code
             </a>
           </div>
         </div>
 
         <!-- Proyek 5: Bybit RSI Trading Bot -->
-        <div class="project-card spotlight-card">
+        <div class="project-card spotlight-card" data-category="data">
           <div class="project-top">
             <div class="project-header-row">
-              <span class="project-category">Otomasi &amp; API</span>
+              <span class="project-category">Otomasi API &amp; Logika Eksekusi</span>
             </div>
-            <h3 class="project-name">Bybit RSI Algorithmic Bot</h3>
+            <h3 class="project-name">Bybit RSI Algorithmic Execution</h3>
             <p class="project-summary">
-              Skrip eksekusi trading otomatis berbasis Python yang terhubung ke Bybit V5 Exchange API. Menganalisis momentum candlestick secara real-time memakai indikator RSI untuk memicu sinyal beli/jual dengan batas risiko.
+              Skrip eksekusi otomatis berbasis Python yang terhubung ke REST API Bybit V5. Memantau momentum pasar secara berkala dan menjalankan aturan proteksi risiko terprogram tanpa intervensi manual.
             </p>
+            <div class="project-impact">
+              <i class="fa-solid fa-circle-check"></i> <strong>Keahlian Terapan:</strong> Integrasi REST API pihak ketiga, penanganan timeout/retry, dan automasi pemrosesan sinyal data numerik.
+            </div>
             <div class="project-tags">
               <span class="tag">Python</span>
               <span class="tag">Bybit API V5</span>
-              <span class="tag">Indikator RSI</span>
-              <span class="tag">Otomasi</span>
+              <span class="tag">REST API Integration</span>
+              <span class="tag">Risk Management</span>
             </div>
           </div>
           <div class="project-links">
             <a href="https://github.com/adlizainpribadi65-alt/bybit-rsi-crypto-bot" target="_blank" rel="noopener noreferrer" class="proj-link">
-              <i class="fa-brands fa-github"></i> Repository
+              <i class="fa-brands fa-github"></i> Repository GitHub
             </a>
           </div>
         </div>
 
         <!-- Proyek 6: Prediksi Harga Ethereum (LSTM) -->
-        <div class="project-card spotlight-card">
+        <div class="project-card spotlight-card" data-category="data">
           <div class="project-top">
             <div class="project-header-row">
-              <span class="project-category">Machine Learning</span>
+              <span class="project-category">Analisis Data Deret Waktu (Time-Series)</span>
             </div>
-            <h3 class="project-name">Prediksi Harga Ethereum (LSTM)</h3>
+            <h3 class="project-name">Prediksi Data Deret Waktu (LSTM)</h3>
             <p class="project-summary">
-              Eksperimen deep learning time-series untuk memprediksi tren pergerakan harga Ethereum menggunakan jaringan syaraf tiruan Long Short-Term Memory (LSTM) dengan TensorFlow dan Pandas.
+              Eksperimen pemodelan deep learning jaringan syaraf tiruan Long Short-Term Memory (LSTM) dengan TensorFlow untuk mengenali tren dan pola historis data deret waktu yang fluktuatif.
             </p>
+            <div class="project-impact">
+              <i class="fa-solid fa-circle-check"></i> <strong>Keahlian Terapan:</strong> Pembersihan data (data cleaning), normalisasi data numerik, dan evaluasi akurasi model prediktif.
+            </div>
             <div class="project-tags">
               <span class="tag">Python</span>
               <span class="tag">TensorFlow</span>
-              <span class="tag">LSTM</span>
-              <span class="tag">Time-Series</span>
+              <span class="tag">Pandas &amp; NumPy</span>
+              <span class="tag">Time-Series Modeling</span>
             </div>
           </div>
           <div class="project-links">
             <a href="https://github.com/adlizainpribadi65-alt/ethereum-price-prediction-lstm" target="_blank" rel="noopener noreferrer" class="proj-link">
-              <i class="fa-brands fa-github"></i> Repository
+              <i class="fa-brands fa-github"></i> Repository GitHub
             </a>
           </div>
         </div>
@@ -1473,34 +1882,46 @@
     <!-- SKRIPSI & STUDI KASUS RISET -->
     <section id="thesis" class="reveal">
       <div class="section-head">
-        <h2 class="section-title">Skripsi &amp; Studi Kasus Riset</h2>
-        <p class="section-desc">Penelitian ilmiah terapan untuk pemenuhan gelar Sarjana Komputer di Universitas Bale Bandung.</p>
+        <span class="section-tag">Riset Ilmiah Terapan</span>
+        <h2 class="section-title">Skripsi &amp; Implementasi Industri</h2>
+        <p class="section-desc">Karya ilmiah akhir pemenuhan gelar Sarjana Komputer di Universitas Bale Bandung yang memecahkan masalah penilaian SDM secara nyata.</p>
       </div>
 
       <div class="thesis-card spotlight-card">
         <div class="thesis-content">
           <div class="thesis-badge">
-            <i class="fa-solid fa-graduation-cap"></i> Skripsi / Tugas Akhir (2026)
+            <i class="fa-solid fa-graduation-cap"></i> Tugas Akhir S1 Teknik Informatika (Tahun 2026)
           </div>
           <h3 class="thesis-title">
-            Sistem Pendukung Keputusan Penilaian Kinerja Karyawan Berbasis AHP-SAW Terintegrasi SOP Kedisiplinan
+            SISTEM PENDUKUNG KEPUTUSAN PENILAIAN KINERJA KARYAWAN BERBASIS AHP-SAW TERINTEGRASI SOP KEDISIPLINAN
           </h3>
           <div class="thesis-meta">
-            Penulis: <span>Adli Zain Pribadi</span> &bull; Pembimbing: <span>Yudi Herdiana, M.T. &amp; Yusuf Muharam, M.Kom.</span>
+            Penulis: <span>Adli Zain Pribadi, S.Kom.</span> &bull; Dosen Pembimbing: <span>Yudi Herdiana, M.T. &amp; Yusuf Muharam, M.Kom.</span>
             <br>
-            Studi Kasus: <span>Reegiolla The Shoes (Cimaung, Kab. Bandung)</span> &bull; Program Studi Teknik Informatika UNIBBA
+            Lokasi Studi Kasus: <span>Reegiolla The Shoes (Kec. Cimaung, Kab. Bandung)</span>
           </div>
 
           <div class="thesis-abstract">
-            <strong>Ringkasan Studi:</strong> Penilaian kinerja karyawan di industri manufaktur skala UMKM sering kali masih mengandalkan pencatatan manual yang rentan terhadap subjektivitas dan bias personal. Penelitian ini mengintegrasikan metode <em>Analytic Hierarchy Process (AHP)</em> untuk pembobotan kriteria secara konsisten dan <em>Simple Additive Weighting (SAW)</em> untuk perangkingan karyawan berdasarkan SOP kedisiplinan kerja nyata, menghasilkan sistem penilaian yang transparan dan dapat dipertanggungjawabkan.
+            <strong>Latar Belakang &amp; Solusi:</strong> Di banyak perusahaan skala berkembang, evaluasi kinerja staf sering menghadapi kendala subjektivitas penilai dan pencatatan manual yang lambat. Penelitian ini merancang solusi komputasi yang menggabungkan metode <em>Analytic Hierarchy Process (AHP)</em> untuk menentukan bobot kepentingan kriteria penilaian secara matematis, serta <em>Simple Additive Weighting (SAW)</em> untuk menghitung skor akhir setiap karyawan berdasarkan data absensi dan SOP kedisiplinan nyata.
+          </div>
+
+          <div class="thesis-highlights">
+            <div class="thesis-point">
+              <strong>1. Pembobotan Kriteria Konsisten</strong>
+              Menghilangkan bias penilaian melalui matriks perbandingan berpasangan AHP dengan rasio konsistensi &lt; 0.1.
+            </div>
+            <div class="thesis-point">
+              <strong>2. Perangkingan Akurat Berbasis SOP</strong>
+              Mengubah riwayat kedisiplinan, ketepatan waktu, dan kontribusi menjadi nilai kuantitatif yang objektif.
+            </div>
           </div>
 
           <div class="thesis-tags">
-            <span class="tag">Sistem Pendukung Keputusan (SPK)</span>
+            <span class="tag">Decision Support System (SPK)</span>
             <span class="tag">AHP (Analytic Hierarchy Process)</span>
             <span class="tag">SAW (Simple Additive Weighting)</span>
             <span class="tag">PHP &amp; MySQL</span>
-            <span class="tag">Manajemen SDM</span>
+            <span class="tag">Manajemen SDM &amp; Operasional</span>
           </div>
         </div>
       </div>
@@ -1509,8 +1930,9 @@
     <!-- PENGALAMAN KERJA & PROYEK -->
     <section id="experience" class="reveal">
       <div class="section-head">
-        <h2 class="section-title">Pengalaman Kerja &amp; Proyek</h2>
-        <p class="section-desc">Riwayat pengalaman kerja profesional, pengembangan sistem, dan operasional.</p>
+        <span class="section-tag">Riwayat Kerja &amp; Kontribusi</span>
+        <h2 class="section-title">Pengalaman Kerja &amp; Praktik</h2>
+        <p class="section-desc">Rekam jejak pengalaman kerja langsung di lapangan, mencakup pengembangan sistem, pelayanan klien, dan operasional.</p>
       </div>
 
       <div class="timeline-list">
@@ -1520,9 +1942,13 @@
           <div class="timeline-inner timeline-date">2024 – 2026</div>
           <div class="timeline-inner timeline-content">
             <h4>Reegiolla The Shoes</h4>
-            <div class="timeline-org">Desain Kreatif, Pembuatan Aplikasi Inventori &amp; SPK Kinerja Karyawan</div>
+            <div class="timeline-org">Staf Aplikasi Inventori, Desain Kreatif &amp; Pengembang SPK Kinerja</div>
             <div class="timeline-desc">
-              Menangani perancangan aset desain kreatif, pembuatan sistem aplikasi inventori produk, serta implementasi Sistem Pendukung Keputusan (SPK) penilaian kinerja karyawan berbasis metode AHP dan SAW terintegrasi SOP kedisiplinan.
+              <ul>
+                <li>Merancang dan membangun aplikasi inventori produk guna memonitor keluar-masuk barang secara lebih teratur dan meminimalkan selisih stok.</li>
+                <li>Menerapkan Sistem Pendukung Keputusan (SPK) penilaian kinerja karyawan berbasis integrasi SOP kedisiplinan kerja untuk mempermudah evaluasi berkala oleh pimpinan.</li>
+                <li>Membuat materi visual dan materi promosi kreatif menggunakan Canva &amp; tools desain untuk mendukung penjualan produk.</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -1531,10 +1957,14 @@
         <div class="timeline-row spotlight-card">
           <div class="timeline-inner timeline-date">2023 – Sekarang</div>
           <div class="timeline-inner timeline-content">
-            <h4>Jasa Pembuatan Aplikasi</h4>
-            <div class="timeline-org">Web E-Commerce, Undangan Digital, Ucapan Digital Web &amp; Mobile</div>
+            <h4>Jasa Pembuatan Aplikasi &amp; Solusi Web</h4>
+            <div class="timeline-org">Freelance Web Developer &amp; Solusi Digital UMKM</div>
             <div class="timeline-desc">
-              Melayani jasa perancangan dan *full-stack deployment* untuk toko online (E-Commerce), sistem undangan pernikahan/acara digital interaktif, serta aplikasi ucapan digital berbasis web &amp; mobile.
+              <ul>
+                <li>Membantu pelaku usaha UMKM dan klien personal membangun website E-Commerce, portal profil usaha, serta sistem undangan &amp; ucapan digital interaktif.</li>
+                <li>Menangani siklus pengembangan menyeluruh: penerjemahan kebutuhan klien, perancangan antarmuka (UI/UX), penulisan kode, hingga deployment ke hosting publik.</li>
+                <li>Memastikan website mudah diakses, ringan dibuka di smartphone, dan memiliki struktur navigasi yang ramah pengguna awam.</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -1544,9 +1974,13 @@
           <div class="timeline-inner timeline-date">2023 – 2024</div>
           <div class="timeline-inner timeline-content">
             <h4>Sahira Coklat Dubai</h4>
-            <div class="timeline-org">Staf Packing</div>
+            <div class="timeline-org">Staf Packing &amp; Quality Control (QC) Operasional</div>
             <div class="timeline-desc">
-              Mengelola proses pengemasan produk coklat secara higienis, *quality control* kesiapan kemasan sebelum pengiriman, serta memastikan standar ketepatan dan efisiensi packing operasional.
+              <ul>
+                <li>Menjalankan prosedur pengemasan produk dengan standar kebersihan dan keamanan pangan yang ketat.</li>
+                <li>Melakukan pemeriksaan mutu (Quality Control) fisik kemasan sebelum proses distribusi ke ekspedisi, menjaga tingkat kepuasan pelanggan.</li>
+                <li>Terbiasa dengan target volume harian, kerja sama tim lini produksi, serta kepatuhan penuh terhadap SOP tempat kerja.</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -1557,8 +1991,9 @@
     <!-- RIWAYAT PENDIDIKAN -->
     <section id="education" class="reveal">
       <div class="section-head">
-        <h2 class="section-title">Riwayat Pendidikan</h2>
-        <p class="section-desc">Latar belakang pendidikan formal dari tingkat pertama hingga perguruan tinggi.</p>
+        <span class="section-tag">Latar Belakang Akademik</span>
+        <h2 class="section-title">Riwayat Pendidikan Formal</h2>
+        <p class="section-desc">Pondasi keilmuan matematika, logika berpikir, dan ilmu komputer yang telah ditempuh.</p>
       </div>
 
       <div class="timeline-list">
@@ -1568,9 +2003,9 @@
           <div class="timeline-inner timeline-date">2022 – 2026</div>
           <div class="timeline-inner timeline-content">
             <h4>S1 Teknik Informatika (Sarjana Komputer)</h4>
-            <div class="timeline-org">Universitas Bale Bandung (UNIBBA)</div>
+            <div class="timeline-org">Universitas Bale Bandung (UNIBBA) &bull; Lulusan Tahun 2026</div>
             <div class="timeline-desc">
-              Gelar Sarjana Komputer (S.Kom.). Lulusan tahun 2026. Fokus bidang: Algoritma &amp; Struktur Data, Rekayasa Perangkat Lunak, Basis Data Relasional, dan Sistem Pendukung Keputusan.
+              Fokus kurikulum pada Rekayasa Perangkat Lunak, Algoritma &amp; Pemrograman Terstruktur, Manajemen Basis Data Relasional, Sistem Pendukung Keputusan, dan Etika Rekayasa TI.
             </div>
           </div>
         </div>
@@ -1580,9 +2015,9 @@
           <div class="timeline-inner timeline-date">2019 – 2022</div>
           <div class="timeline-inner timeline-content">
             <h4>SMA Negeri 1 Banjaran</h4>
-            <div class="timeline-org">Jurusan MIPA (Matematika &amp; Ilmu Pengetahuan Alam)</div>
+            <div class="timeline-org">Peminatan Matematika &amp; Ilmu Pengetahuan Alam (MIPA)</div>
             <div class="timeline-desc">
-              Pendidikan menengah atas (lulusan 2022) dengan peminatan sains, logika matematika terapan, dan dasar-dasar ilmu komputer.
+              Memperkuat kemampuan penalaran analitis, metode kuantitatif, kalkulus dasar, dan logika ilmiah terapan.
             </div>
           </div>
         </div>
@@ -1594,7 +2029,7 @@
             <h4>SMP Negeri 2 Banjaran</h4>
             <div class="timeline-org">Pendidikan Menengah Pertama</div>
             <div class="timeline-desc">
-              Menyelesaikan pendidikan dasar lanjutan (lulusan 2019) di Banjaran, Kabupaten Bandung.
+              Menyelesaikan pendidikan dasar lanjutan di Banjaran, Kabupaten Bandung dengan integritas baik.
             </div>
           </div>
         </div>
@@ -1605,51 +2040,54 @@
     <!-- KEAHLIAN TEKNIS & APLIKASI -->
     <section id="skills" class="reveal">
       <div class="section-head">
-        <h2 class="section-title">Keahlian &amp; Aplikasi yang Dikuasai</h2>
-        <p class="section-desc" style="max-width: 720px; line-height: 1.7;">
-          Lulusan S1 Teknik Informatika Universitas Bale Bandung dengan pemahaman di bidang pemrograman, pengembangan web, dan pengelolaan basis data. Memiliki semangat belajar, kemampuan analitis, serta komitmen untuk berkembang secara profesional.
-        </p>
+        <span class="section-tag">Kompetensi Teknis</span>
+        <h2 class="section-title">Keahlian &amp; Perangkat Lunak</h2>
+        <p class="section-desc">Kombinasi penguasaan teknologi web modern, pengelolaan basis data, serta perangkat lunak produktivitas kantor yang siap digunakan langsung dalam alur kerja perusahaan.</p>
       </div>
 
       <div class="skills-block">
         <div class="skill-box spotlight-card">
           <div class="skill-inner">
-            <h4><i class="fa-solid fa-code"></i> Bahasa Pemrograman</h4>
+            <h4><i class="fa-solid fa-code"></i> Pengembangan Web &amp; Bahasa</h4>
             <div class="skill-pills">
               <span class="tag">JavaScript (ES6+)</span>
               <span class="tag">PHP</span>
               <span class="tag">Python</span>
-              <span class="tag">Go (Dasar)</span>
-              <span class="tag">HTML5 / CSS3</span>
-              <span class="tag">SQL</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="skill-box spotlight-card">
-          <div class="skill-inner">
-            <h4><i class="fa-solid fa-layer-group"></i> Framework &amp; Library</h4>
-            <div class="skill-pills">
+              <span class="tag">HTML5 &amp; CSS3</span>
               <span class="tag">React.js</span>
-              <span class="tag">Bootstrap</span>
               <span class="tag">Tailwind CSS</span>
-              <span class="tag">SheetJS</span>
-              <span class="tag">Chart.js</span>
-              <span class="tag">TensorFlow</span>
+              <span class="tag">Bootstrap</span>
+              <span class="tag">SheetJS (Excel Engine)</span>
             </div>
           </div>
         </div>
 
         <div class="skill-box spotlight-card">
           <div class="skill-inner">
-            <h4><i class="fa-solid fa-database"></i> Database &amp; Arsitektur</h4>
+            <h4><i class="fa-solid fa-database"></i> Database &amp; Analisis Data</h4>
             <div class="skill-pills">
-              <span class="tag">MySQL</span>
+              <span class="tag">MySQL &amp; MariaDB</span>
               <span class="tag">PostgreSQL</span>
-              <span class="tag">REST APIs</span>
-              <span class="tag">Git Versioning</span>
-              <span class="tag">Sistem SPK</span>
-              <span class="tag">Linux CLI</span>
+              <span class="tag">Relational Database Design</span>
+              <span class="tag">Sistem SPK (AHP &amp; SAW)</span>
+              <span class="tag">Pandas &amp; Data Prep</span>
+              <span class="tag">RESTful API Design</span>
+              <span class="tag">Chart.js (Visualisasi)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-box spotlight-card">
+          <div class="skill-inner">
+            <h4><i class="fa-solid fa-briefcase"></i> Nilai Kerja Perusahaan</h4>
+            <div class="skill-pills">
+              <span class="tag">Problem Solving</span>
+              <span class="tag">Disiplin Tenggat Waktu</span>
+              <span class="tag">Dokumentasi Rapi</span>
+              <span class="tag">Kerja Sama Tim</span>
+              <span class="tag">Quality Control (QC)</span>
+              <span class="tag">Siap Belajar Cepat</span>
+              <span class="tag">Git Version Control</span>
             </div>
           </div>
         </div>
@@ -1658,8 +2096,11 @@
       <!-- APLIKASI & SOFTWARE YANG DIKUASAI -->
       <div class="tools-section">
         <h3 class="tools-title">
-          <i class="fa-solid fa-toolbox"></i> Aplikasi &amp; Perangkat Lunak
+          <i class="fa-solid fa-toolbox"></i> Aplikasi &amp; Perangkat Lunak Operasional Kantor
         </h3>
+        <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px;">
+          Siap bekerja menggunakan perangkat lunak pemrograman maupun administrasi data kantor tanpa perlu penyesuaian yang lama:
+        </p>
         
         <div class="tools-grid">
           <!-- 1. VS Code -->
@@ -1667,7 +2108,7 @@
             <div class="tool-icon" style="color: #007acc;">
               <i class="fa-solid fa-code"></i>
             </div>
-            <div class="tool-name">Visual Code</div>
+            <div class="tool-name">Visual Studio Code</div>
             <div class="tool-cat">Code Editor</div>
           </div>
 
@@ -1676,8 +2117,8 @@
             <div class="tool-icon" style="color: #fb7a24;">
               <i class="fa-solid fa-server"></i>
             </div>
-            <div class="tool-name">Xampp</div>
-            <div class="tool-cat">Local Server</div>
+            <div class="tool-name">XAMPP</div>
+            <div class="tool-cat">Local Environment</div>
           </div>
 
           <!-- 3. MySQL -->
@@ -1686,7 +2127,7 @@
               <i class="fa-solid fa-database"></i>
             </div>
             <div class="tool-name">MySQL</div>
-            <div class="tool-cat">RDBMS</div>
+            <div class="tool-cat">Relational DBMS</div>
           </div>
 
           <!-- 4. phpMyAdmin -->
@@ -1694,17 +2135,17 @@
             <div class="tool-icon" style="color: #f3702a;">
               <i class="fa-solid fa-table-columns"></i>
             </div>
-            <div class="tool-name">PHP My Admin</div>
-            <div class="tool-cat">DB Admin</div>
+            <div class="tool-name">phpMyAdmin</div>
+            <div class="tool-cat">Database UI</div>
           </div>
 
           <!-- 5. GitHub -->
           <div class="tool-card spotlight-card">
-            <div class="tool-icon" style="color: #f4f4f6;">
+            <div class="tool-icon" style="color: #f4f4f7;">
               <i class="fa-brands fa-github"></i>
             </div>
-            <div class="tool-name">Github</div>
-            <div class="tool-cat">VCS &amp; CI/CD</div>
+            <div class="tool-name">GitHub</div>
+            <div class="tool-cat">Kolaborasi Kode</div>
           </div>
 
           <!-- 6. Figma -->
@@ -1713,7 +2154,7 @@
               <i class="fa-brands fa-figma"></i>
             </div>
             <div class="tool-name">Figma</div>
-            <div class="tool-cat">UI/UX Design</div>
+            <div class="tool-cat">Mockup UI/UX</div>
           </div>
 
           <!-- 7. Ms Word -->
@@ -1721,8 +2162,8 @@
             <div class="tool-icon" style="color: #2b579a;">
               <i class="fa-solid fa-file-word"></i>
             </div>
-            <div class="tool-name">Ms Word</div>
-            <div class="tool-cat">Dokumentasi</div>
+            <div class="tool-name">Microsoft Word</div>
+            <div class="tool-cat">Dokumentasi Resmi</div>
           </div>
 
           <!-- 8. Ms Excel -->
@@ -1730,8 +2171,8 @@
             <div class="tool-icon" style="color: #217346;">
               <i class="fa-solid fa-file-excel"></i>
             </div>
-            <div class="tool-name">Ms Excel</div>
-            <div class="tool-cat">Olah Data</div>
+            <div class="tool-name">Microsoft Excel</div>
+            <div class="tool-cat">Pengolahan Data &amp; Rumus</div>
           </div>
 
           <!-- 9. Ms PowerPoint -->
@@ -1739,8 +2180,8 @@
             <div class="tool-icon" style="color: #d24726;">
               <i class="fa-solid fa-file-powerpoint"></i>
             </div>
-            <div class="tool-name">Ms Powerpoint</div>
-            <div class="tool-cat">Presentasi</div>
+            <div class="tool-name">Ms PowerPoint</div>
+            <div class="tool-cat">Presentasi Bisnis</div>
           </div>
 
           <!-- 10. Canva -->
@@ -1749,7 +2190,7 @@
               <i class="fa-solid fa-palette"></i>
             </div>
             <div class="tool-name">Canva</div>
-            <div class="tool-cat">Grafis &amp; Visual</div>
+            <div class="tool-cat">Desain Visual &amp; Promosi</div>
           </div>
         </div>
       </div>
@@ -1758,8 +2199,9 @@
     <!-- SERTIFIKASI & KUALIFIKASI -->
     <section id="certifications" class="reveal">
       <div class="section-head">
-        <h2 class="section-title">Sertifikasi &amp; Lisensi</h2>
-        <p class="section-desc">Kualifikasi teknis dan standarisasi kompetensi yang telah diselesaikan.</p>
+        <span class="section-tag">Validasi Standar &amp; Lisensi</span>
+        <h2 class="section-title">Sertifikasi &amp; Kemahiran</h2>
+        <p class="section-desc">Pengakuan kompetensi teknis dan kemampuan komunikasi profesional yang terverifikasi.</p>
       </div>
 
       <div class="certifications-grid">
@@ -1770,10 +2212,10 @@
             <i class="fa-solid fa-code"></i>
           </div>
           <div class="cert-info">
-            <div class="cert-badge">Tahun 2026</div>
+            <div class="cert-badge">Tahun Kelulusan 2026</div>
             <h4>Junior Web Development</h4>
             <p>
-              Sertifikasi kompetensi pengembangan aplikasi web, mencakup arsitektur frontend modern, clean code, integrasi API, serta standar keamanan dan responsivitas web.
+              Menguji dan menstandarisasi kemampuan membangun arsitektur frontend web modern, penulisan kode terstruktur, integrasi antarmuka pengguna, keamanan data dasar, dan standar responsivitas di berbagai perangkat.
             </p>
           </div>
         </div>
@@ -1787,7 +2229,7 @@
             <div class="cert-badge">Tahun 2026</div>
             <h4>TOEFL (Test of English as a Foreign Language)</h4>
             <p>
-              Standarisasi kemahiran bahasa Inggris internasional untuk komunikasi teknis, dokumentasi rekayasa perangkat lunak, dan kolaborasi profesional skala global.
+              Standarisasi kemahiran bahasa Inggris untuk pemahaman dokumentasi teknis rekayasa perangkat lunak internasional, komunikasi kerja tertulis, dan kolaborasi profesional.
             </p>
           </div>
         </div>
@@ -1795,23 +2237,23 @@
       </div>
     </section>
 
-    <!-- KONTAK -->
+    <!-- KONTAK LANGSUNG -->
     <section id="contact" class="reveal">
       <div class="contact-card">
-        <h3>Mari Terhubung</h3>
+        <h3>Siap Memberikan Kontribusi Terbaik untuk Perusahaan Anda</h3>
         <p>
-          Saya aktif mencari posisi Software Engineer purnawaktu, freelance, maupun peluang kolaborasi proyek. Silakan hubungi saya langsung.
+          Saya aktif mencari peluang kerja purnawaktu (Full-Time), kontrak, maupun proyek sistem informasi operasional. Berkas lamaran, CV, dan surat pengantar siap dikirimkan segera.
         </p>
         <div class="contact-buttons-wrap">
           <a href="mailto:adlizainpribadi65@gmail.com" class="btn btn-primary">
-            <i class="fa-solid fa-paper-plane"></i> Kirim Email
+            <i class="fa-solid fa-paper-plane"></i> Kirim Email Lamaran
           </a>
           <button class="btn btn-secondary" onclick="copyEmail()">
             <i class="fa-regular fa-copy"></i>
             <span id="copyBtnText">adlizainpribadi65@gmail.com</span>
           </button>
           <a href="https://github.com/adlizainpribadi65-alt" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-            <i class="fa-brands fa-github"></i> Profil GitHub
+            <i class="fa-brands fa-github"></i> Kunjungi GitHub
           </a>
         </div>
       </div>
@@ -1819,23 +2261,54 @@
 
   </main>
 
+  <!-- TOMBOL KEMBALI KE ATAS -->
+  <button class="back-to-top" id="backToTop" onclick="scrollToTop()" title="Kembali ke Atas">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div>&copy; 2026 Adli Zain Pribadi. Hak cipta dilindungi.</div>
-      <div>git commit cfcf9a3 &bull; Dihosting di GitHub Pages</div>
+      <div>&copy; 2026 Adli Zain Pribadi, S.Kom. Hak cipta dilindungi.</div>
+      <div>Dirancang &amp; di-deploy dengan standar performa web tinggi (Core Web Vitals).</div>
       <div><a href="#" style="color: var(--text-muted);"><i class="fa-solid fa-arrow-up"></i> Ke Atas</a></div>
     </div>
   </footer>
 
   <!-- NOTIFIKASI TOAST -->
   <div class="toast" id="toast">
-    <i class="fa-solid fa-check" style="color: var(--success-text);"></i>
+    <i class="fa-solid fa-circle-check" style="color: var(--success-text);"></i>
     <span id="toastMsg">Alamat email berhasil disalin!</span>
   </div>
 
   <script>
-    // Salin Email
+    // 1. SCROLL PROGRESS BAR & BACK TO TOP BUTTON
+    const scrollProgressBar = document.getElementById('scrollProgress');
+    const backToTopBtn = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+      const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      
+      if (scrollProgressBar) {
+        scrollProgressBar.style.width = scrolled + '%';
+      }
+
+      if (backToTopBtn) {
+        if (winScroll > 350) {
+          backToTopBtn.classList.add('visible');
+        } else {
+          backToTopBtn.classList.remove('visible');
+        }
+      }
+    });
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // 2. SALIN EMAIL & TOAST NOTIFICATION
     function copyEmail() {
       const email = 'adlizainpribadi65@gmail.com';
       navigator.clipboard.writeText(email).then(() => {
@@ -1854,19 +2327,20 @@
     function showToast(msg) {
       const toast = document.getElementById('toast');
       const toastMsg = document.getElementById('toastMsg');
+      if (!toast || !toastMsg) return;
       toastMsg.innerText = msg;
       toast.classList.add('show');
       setTimeout(() => {
         toast.classList.remove('show');
-      }, 2500);
+      }, 2600);
     }
 
-    // EFEK TYPEWRITER
+    // 3. EFEK TYPEWRITER
     const words = [
-      "Pengembangan Web & Aplikasi Internal",
+      "Aplikasi Web & Dashboard Operasional",
       "Sistem Pendukung Keputusan (AHP & SAW)",
-      "Otomasi Bisnis & Pemrosesan Data",
-      "Lulusan Teknik Informatika (UNIBBA)"
+      "Otomasi Pelaporan Data (Excel & API)",
+      "Lulusan S1 Teknik Informatika (UNIBBA)"
     ];
     let wordIndex = 0;
     let charIndex = 0;
@@ -1885,42 +2359,47 @@
         charIndex++;
       }
 
-      let speed = isDeleting ? 35 : 75;
+      let speed = isDeleting ? 30 : 65;
 
       if (!isDeleting && charIndex === currentWord.length) {
-        speed = 1800;
+        speed = 1900;
         isDeleting = true;
       } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
         wordIndex = (wordIndex + 1) % words.length;
-        speed = 400;
+        speed = 350;
       }
 
       setTimeout(typeEffect, speed);
     }
     typeEffect();
 
-    // INTERAKTIF TERMINAL EMULATOR
+    // 4. INTERAKTIF TERMINAL EMULATOR (Ramah Perusahaan / HR)
     const termCommands = {
       whoami: {
-        cmd: "whoami --verbose",
-        res: `[nama]: "Adli Zain Pribadi, S.Kom."<br>[pendidikan]: "Sarjana Komputer (Universitas Bale Bandung)"<br>[domisili]: "Bandung, Indonesia"<br>[status]: "Siap untuk posisi Software Engineer &amp; Full-Stack Web Developer"`
+        path: "~/profil",
+        cmd: "./ringkasan.sh --perusahaan",
+        res: `[Kandidat]: "Adli Zain Pribadi, S.Kom."<br>[Pendidikan]: "S1 Teknik Informatika - Universitas Bale Bandung (Lulus 2026)"<br>[Nilai Tambah]: "Mampu membangun aplikasi web operasional & otomasi pelaporan Excel mandiri"<br>[Status Rekrutmen]: "Siap bergabung segera untuk posisi Software Engineer / Web Developer"`
       },
       vision: {
-        cmd: "cat visi-misi.md",
+        path: "~/nilai-kerja",
+        cmd: "cat komitmen-perusahaan.md",
         res: `<span style="color:#60a5fa;font-weight:600;">[VISI SAYA]</span><br>&ldquo;Menjadi pribadi yang profesional dan kompeten, terus belajar, mengembangkan kemampuan, serta memberikan kontribusi positif bagi perusahaan.&rdquo;<br><br><span style="color:#60a5fa;font-weight:600;">[MISI SAYA]</span><br>&ldquo;Meningkatkan kompetensi, menjaga profesionalisme, membangun kerja sama, serta memberikan kontribusi terbaik bagi perusahaan.&rdquo;`
       },
       stack: {
-        cmd: "cat stack.json | jq .core",
-        res: `{<br>&nbsp;&nbsp;"bahasa": ["JavaScript", "PHP", "Python", "SQL"],<br>&nbsp;&nbsp;"framework": ["React", "Bootstrap", "Tailwind", "SheetJS"],<br>&nbsp;&nbsp;"metode_dan_tools": ["SPK (AHP-SAW)", "REST APIs", "Git"]<br>}`
+        path: "~/teknologi",
+        cmd: "cat keahlian.json | jq .operasional",
+        res: `{<br>&nbsp;&nbsp;"bahasa_pemrograman": ["JavaScript (ES6+)", "PHP", "Python", "SQL"],<br>&nbsp;&nbsp;"spesialisasi_web": ["React.js", "SheetJS (Excel Generator)", "REST APIs", "Tailwind"],<br>&nbsp;&nbsp;"aplikasi_kantor": ["Microsoft Excel", "Microsoft Word", "Canva", "Figma", "Git"]<br>}`
       },
       git: {
-        cmd: "git log -2 --oneline",
-        res: `<span style="color:#60a5fa;">cfcf9a3</span> feat: implementasi animasi IT elegan &amp; terminal interaktif<br><span style="color:#60a5fa;">3243cdc</span> refactor: desain ulang UI minimalis modern standar engineer`
+        path: "~/pengalaman",
+        cmd: "git log --oneline -3",
+        res: `<span style="color:#60a5fa;">2024-2026</span> Reegiolla The Shoes — Aplikasi Inventori & SPK Kinerja Karyawan<br><span style="color:#60a5fa;">2023-skrg</span> Jasa Pembuatan Aplikasi — Web E-Commerce & Undangan Digital<br><span style="color:#60a5fa;">2023-2024</span> Sahira Coklat Dubai — Staf Packing & Quality Control Operasional`
       },
       contact: {
-        cmd: "./kontak.sh",
-        res: `➜ Email: adlizainpribadi65@gmail.com<br>➜ GitHub: https://github.com/adlizainpribadi65-alt<br>➜ Status: Terbuka untuk kesempatan kerja &amp; proyek baru`
+        path: "~/kontak",
+        cmd: "./kontak-cepat.sh",
+        res: `➜ Email Resmi : adlizainpribadi65@gmail.com<br>➜ Repositori : https://github.com/adlizainpribadi65-alt<br>➜ Domisili : Bandung, Jawa Barat (Siap Onsite / Hybrid / Remote)<br>➜ Ketersediaan: Siap Mulai Bekerja Segera`
       }
     };
 
@@ -1935,11 +2414,71 @@
       const cmdEl = document.getElementById('termExecCmd');
       const resEl = document.getElementById('termExecResult');
 
-      cmdEl.innerText = data.cmd;
-      resEl.innerHTML = data.res;
+      if (cmdEl && resEl) {
+        cmdEl.innerText = data.cmd;
+        resEl.innerHTML = data.res;
+      }
     }
 
-    // SPOTLIGHT MOUSE TRACKING
+    // 5. FILTER PROYEK DENGAN ANIMASI
+    function filterProjects(category) {
+      const buttons = document.querySelectorAll('.filter-btn');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      const cards = document.querySelectorAll('.project-card');
+      cards.forEach(card => {
+        const cats = card.getAttribute('data-category') || '';
+        if (category === 'all' || cats.includes(category)) {
+          card.classList.remove('hidden');
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(12px)';
+          setTimeout(() => {
+            card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+          }, 30);
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    // 6. ANIMATED NUMBER COUNTER
+    function animateCounters() {
+      const counters = document.querySelectorAll('.counter');
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        let count = 0;
+        const speed = target / 25; // 25 steps
+
+        const updateCount = () => {
+          count += speed;
+          if (count < target) {
+            counter.innerText = Math.ceil(count);
+            setTimeout(updateCount, 35);
+          } else {
+            counter.innerText = target;
+          }
+        };
+        updateCount();
+      });
+    }
+
+    let counterAnimated = false;
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !counterAnimated) {
+          animateCounters();
+          counterAnimated = true;
+        }
+      });
+    }, { threshold: 0.3 });
+
+    const infoStrip = document.querySelector('.quick-info-strip');
+    if (infoStrip) counterObserver.observe(infoStrip);
+
+    // 7. SPOTLIGHT MOUSE TRACKING
     document.querySelectorAll('.spotlight-card').forEach(card => {
       card.addEventListener('mousemove', e => {
         const rect = card.getBoundingClientRect();
@@ -1948,7 +2487,7 @@
       });
     });
 
-    // SCROLL REVEAL (IntersectionObserver)
+    // 8. SCROLL REVEAL (IntersectionObserver)
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
