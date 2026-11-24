@@ -175,25 +175,9 @@
       background: rgba(9, 9, 13, 0.88);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid var(--border-subtle);
       transition: all 0.25s ease;
       position: relative;
-    }
-
-    /* Ambient animated RGB bottom beam */
-    .header-rgb-beam {
-      position: absolute;
-      bottom: -1px;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, 
-        #ff007a, #7928ca, #0070f3, #00dfd8, #10b981, #f59e0b, #ff007a);
-      background-size: 300% 100%;
-      animation: rgbFlow 6s linear infinite;
-      box-shadow: 0 0 12px rgba(0, 112, 243, 0.6), 0 0 20px rgba(121, 40, 202, 0.4);
-      opacity: 0.9;
-      pointer-events: none;
     }
 
     @keyframes rgbFlow {
@@ -1670,9 +1654,8 @@
   <div class="ambient-glow-1"></div>
   <div class="ambient-glow-2"></div>
 
-  <!-- NAVIGASI UTAMA DENGAN RGB AURA & BORDER GLOW -->
+  <!-- NAVIGASI UTAMA DENGAN RGB AURA & POLISHED NAV -->
   <header class="site-header" id="siteHeader">
-    <div class="header-rgb-beam"></div>
     <div class="container nav-inner">
       <a href="#" class="brand">
         <div class="brand-avatar-rgb">
